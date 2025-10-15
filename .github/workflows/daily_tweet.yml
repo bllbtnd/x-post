@@ -2,8 +2,7 @@ name: Post Daily Tweet
 
 on:
   schedule:
-    # Runs once daily at a base time, then randomizes
-    - cron: '0 12 * * *'  # Noon UTC as base
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -23,7 +22,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: Post tweet with random delay
+      - name: Post tweet
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           X_API_KEY: ${{ secrets.X_API_KEY }}
@@ -31,9 +30,4 @@ jobs:
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
-        run: |
-          # Random delay between 0-6 hours (21600 seconds)
-          DELAY=$((RANDOM % 21600))
-          echo "Waiting $((DELAY / 60)) minutes before posting..."
-          sleep $DELAY
-          python x_bot.py
+        run: python x_bot.py
