@@ -42,9 +42,9 @@ NEWS_API_KEY=your_newsapi_key  # Optional
 
 Test locally:
 ```bash
-python x_bot.py --dry-run           # Generate tweet without posting
-python x_bot.py --test-connection   # Verify all APIs work
-python x_bot.py                     # Post for real
+python main.py --dry-run           # Generate tweet without posting
+python main.py --test-connection   # Verify all APIs work
+python main.py                     # Post for real
 ```
 
 ### 4. GitHub Actions Setup
@@ -82,14 +82,14 @@ schedule:
   - cron: '0 12 * * *'  # Daily at 12:00 PM UTC
 ```
 
-**Random Delay**: Bot adds 0-6 hours random delay after trigger. Adjust in `x_bot.py`:
+**Random Delay**: Bot adds 0-12 hours random delay after trigger. Adjust in `main.py`:
 ```python
-max_delay = 21600  # 6 hours (change to: 1800=30min, 3600=1hr, 10800=3hr)
+max_delay = 43200  # 12 hours (change to: 1800=30min, 3600=1hr, 21600=6hr)
 ```
 
 ### Tweet Requirements
 
-Edit prompt in `x_bot.py` to customize tone/style:
+Edit prompt in `gemini.py` to customize tone/style:
 ```python
 prompt = f"""Write a single tweet about: {selected_topic}
 
@@ -123,7 +123,13 @@ x-post/
 ├── .github/
 │   └── workflows/
 │       └── daily_tweet.yml    # GitHub Actions config
-├── x_bot.py                   # Main bot script
+├── main.py                    # Main orchestration script
+├── config.py                  # Environment & configuration
+├── notifications.py           # Discord notifications
+├── trending.py                # Topic fetching & selection
+├── validation.py              # Tweet validation
+├── gemini.py                  # AI model & generation
+├── testing.py                 # API connection tests
 ├── requirements.txt           # Dependencies
 ├── .env                       # Local API keys (gitignored)
 ├── .gitignore
@@ -136,9 +142,9 @@ x-post/
 
 **Local:**
 ```bash
-python x_bot.py --dry-run           # Test without posting
-python x_bot.py --test-connection   # Check API connectivity
-python x_bot.py                     # Post immediately (no delay)
+python main.py --dry-run           # Test without posting
+python main.py --test-connection   # Check API connectivity
+python main.py                     # Post immediately (no delay)
 ```
 
 **Automated:**
