@@ -39,6 +39,132 @@ def get_best_gemini_model():
         print(f"Error getting models: {e}")
         return None
 
+def send_discord_start_notification(post_time_utc, delay_hours, delay_minutes):
+    """Send notification when GitHub Action starts"""
+    try:
+        import requests
+        
+        webhook_url = os.environ.get('DISCORD_WEBHOOK_URL')
+        
+        if not webhook_url:
+            print("⚠️  Discord webhook not configured, skipping notification\n")
+            return
+        
+        # Build embed
+        embed = {
+            "title": "🚀 X Bot Started",
+            "description": "GitHub Action has been triggered. Post will be created after random delay.",
+            "color": 3447003,  # Blue color
+            "fields": [
+                {
+                    "name": "Start Time (UTC)",
+                    "value": datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC'),
+                    "inline": False
+                },
+                {
+                    "name": "Random Delay",
+                    "value": f"{delay_hours}h {delay_minutes}m",
+                    "inline": True
+                },
+                {
+                    "name": "Expected Post Time (UTC)",
+                    "value": post_time_utc.strftime('%Y-%m-%d %H:%M:%S UTC'),
+                    "inline": False
+                }
+            ],
+            "footer": {
+                "text": "X Bot Automation"
+            },
+            "timestamp": datetime.utcnow().isoformat()
+        }
+        
+        payload = {
+            "embeds": [embed]
+        }
+        
+        response = requests.post(webhook_url, json=payload, timeout=10)
+        
+        if response.status_code == 204:
+            print("✅ Discord start notification sent\n")
+        else:
+            print(f"⚠️  Discord start notification failed: {response.status_code}\n")
+            
+    except Exception as e:
+        print(f"⚠️  Discord start notification error: {e}\n")
+
+def send_discord_notification(tweet_data):
+    """Send notification to Discord webhook when tweet is posted"""
+    try:
+        import requests
+        
+        webhook_url = os.environ.get('DISCORD_WEBHOOK_URL')
+        
+        if not webhook_url:
+            print("⚠️  Discord webhook not configured, skipping notification\n")
+            return
+        
+        # Build embed
+        embed = {
+            "title": "✅ New Tweet Posted",
+            "description": tweet_data['tweet_text'],
+            "color": 5814783,  # Green color
+            "fields": [
+                {
+                    "name": "Tweet ID",
+                    "value": tweet_data['tweet_id'],
+                    "inline": True
+                },
+                {
+                    "name": "Length",
+                    "value": f"{tweet_data['length']} chars",
+                    "inline": True
+                },
+                {
+                    "name": "Topic Source",
+                    "value": tweet_data['topic_source'].capitalize(),
+                    "inline": True
+                },
+                {
+                    "name": "Selected Topic",
+                    "value": tweet_data['selected_topic'],
+                    "inline": False
+                },
+                {
+                    "name": "Tweet URL",
+                    "value": tweet_data['tweet_url'],
+                    "inline": False
+                },
+                {
+                    "name": "Posted At (UTC)",
+                    "value": tweet_data['timestamp'],
+                    "inline": True
+                },
+                {
+                    "name": "Model Used",
+                    "value": tweet_data['model_name'],
+                    "inline": True
+                }
+            ],
+            "footer": {
+                "text": "X Bot Automation"
+            },
+            "timestamp": datetime.utcnow().isoformat()
+        }
+        
+        payload = {
+            "embeds": [embed]
+        }
+        
+        response = requests.post(webhook_url, json=payload, timeout=10)
+        
+        if response.status_code == 204:
+            print("✅ Discord post notification sent\n")
+        else:
+            print(f"⚠️  Discord post notification failed: {response.status_code}\n")
+            
+    except Exception as e:
+        print(f"⚠️  Discord post notification error: {e}\n")
+
 def get_trending_topics():
     """
     Fetch trending topics from multiple sources via web scraping.
@@ -216,6 +342,24 @@ def test_api_connections():
     else:
         print("ℹ️  NewsAPI: Not configured (optional)\n")
     
+    # Test Discord webhook if configured
+    webhook_url = os.environ.get('DISCORD_WEBHOOK_URL')
+    if webhook_url:
+        try:
+            import requests
+            test_payload = {
+                "content": "✅ Discord webhook test successful! X Bot is connected."
+            }
+            response = requests.post(webhook_url, json=test_payload, timeout=5)
+            if response.status_code == 204:
+                print(f"✅ Discord Webhook: Connected\n")
+            else:
+                print(f"⚠️  Discord Webhook: Status {response.status_code}\n")
+        except Exception as e:
+            print(f"⚠️  Discord Webhook: {e}\n")
+    else:
+        print("ℹ️  Discord Webhook: Not configured (optional)\n")
+    
     return True
 
 def validate_tweet(tweet):
@@ -238,22 +382,30 @@ def main():
     print("X AUTOMATED POSTING SCRIPT")
     print("=" * 60)
     
-    # Random delay at start (only for real posts, not dry runs or tests)
+    # Calculate random delay and post time BEFORE doing anything else
+    delay = 0
+    post_time_utc = datetime.utcnow()
+    
     if not (DRY_RUN or '--test-connection' in sys.argv):
         max_delay = 43200 # 12 hours in seconds
         delay = random.randint(0, max_delay)
-        delay_hours = delay // 3600
-        delay_minutes = (delay % 3600) // 60
-        
-        post_time = datetime.now() + timedelta(seconds=delay)
-        
+        post_time_utc = datetime.utcnow() + timedelta(seconds=delay)
+    
+    delay_hours = delay // 3600
+    delay_minutes = (delay % 3600) // 60
+    
+    # Send start notification FIRST (only for real posts)
+    if not (DRY_RUN or '--test-connection' in sys.argv):
         print(f"⏱️  Random delay: {delay_hours}h {delay_minutes}m")
-        print(f"   Will post around {post_time.strftime('%I:%M %p UTC')}")
-        print(f"   Current time: {datetime.now().strftime('%I:%M %p UTC')}\n")
+        print(f"   Will post at: {post_time_utc.strftime('%Y-%m-%d %H:%M:%S UTC')}")
+        print(f"   Current time: {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')}\n")
         
+        send_discord_start_notification(post_time_utc, delay_hours, delay_minutes)
+        
+        print(f"⏳ Waiting {delay_hours}h {delay_minutes}m...\n")
         time.sleep(delay)
         
-        print(f"✅ Delay complete! Posting now...\n")
+        print(f"✅ Delay complete! Posting now at {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')}...\n")
     
     if DRY_RUN:
         print("🧪 DRY RUN MODE - Will NOT post to X\n")
@@ -304,49 +456,24 @@ def main():
     # Fetch trending topics
     print("📊 Fetching trending topics...")
     
-    # Try multiple sources in priority order
-    trending = []
-    
-    # 1. Try curated file first (best quality)
-    trending = load_curated_trends()
-    if trending:
-        print(f"✅ Loaded {len(trending)} curated topics")
-    
-    # 2. Try NewsAPI or other services
-    if not trending:
-        trending = get_trending_topics()
-        if trending:
-            print(f"✅ Found {len(trending)} trending topics from news")
-    
-    # Fallback topic pool
-    fallback_topics = [
-        "US politics and policy debates",
-        "European economic challenges",
-        "AI replacing white collar jobs",
-        "mens health and masculinity crisis",
-        "productivity and hustle culture",
-        "climate policy vs economic growth",
-        "social media addiction",
-        "housing affordability crisis",
-        "fitness and body composition",
-        "remote work vs office mandates",
-        "crypto regulation",
-        "free speech vs moderation",
-        "dating apps ruining relationships",
-        "college debt and ROI of degrees"
-    ]
-    
-    # Combine all available topics
+    # Try multiple sources
     all_topics = []
     
+    # 1. Try curated file first (best quality)
+    curated = load_curated_trends()
+    if curated:
+        print(f"✅ Loaded {len(curated)} curated topics")
+        all_topics.extend(curated)
+    
+    # 2. Try NewsAPI or other services
+    trending = get_trending_topics()
     if trending:
-        all_topics.extend(trending[:10])  # Top 10 trending
+        print(f"✅ Found {len(trending)} trending topics from news")
+        all_topics.extend(trending[:15])
     
-    # Always add fallback topics to give AI more options
-    all_topics.extend(fallback_topics)
-    
+    # Check if we have any topics at all
     if not all_topics:
-        print("❌ No topics available. Check your setup.\n")
+        print("❌ No topics available. Add topics to trending_topics.txt or configure NewsAPI.\n")
         sys.exit(1)
     
     # DISPLAY ALL TOPICS BEING SENT TO GEMINI
@@ -355,14 +482,14 @@ def main():
     print(f"{'='*60}")
     
     for i, topic in enumerate(all_topics, 1):
-        # Mark if it's from trending or fallback
-        if trending and topic in trending:
-            print(f"   {i}. 🔥 {topic}")
-        else:
+        # Mark if it's from curated file or news API
+        if curated and topic in curated:
             print(f"   {i}. 📋 {topic}")
+        else:
+            print(f"   {i}. 🔥 {topic}")
     
     print(f"{'='*60}\n")
-    print("Legend: 🔥 = Trending topic | 📋 = Strategic fallback\n")
+    print("Legend: 🔥 = News trending | 📋 = Curated topic\n")
     
     # STEP 1: Let Gemini choose the best topic
     selected_topic = select_best_topic(model, all_topics)
@@ -370,12 +497,16 @@ def main():
     print(f"✅ Gemini selected: {selected_topic}\n")
     
     # Determine source
-    topic_source = "trending" if (trending and selected_topic in trending) else "strategic"
+    if curated and selected_topic in curated:
+        topic_source = "curated"
+    else:
+        topic_source = "trending"
     
     # Build context for AI
     trends_context = ""
-    if trending:
-        trends_context = f"\n\nOther current trending topics for context: {', '.join(trending[:8])}"
+    if len(all_topics) > 1:
+        other_topics = [t for t in all_topics[:8] if t != selected_topic]
+        trends_context = f"\n\nOther current trending topics for context: {', '.join(other_topics)}"
     
     # STEP 2: Generate tweet on the selected topic
     prompt = f"""Write a single tweet about: {selected_topic}
@@ -438,7 +569,7 @@ Output only the tweet text, nothing else."""
             
             # Save to file for review
             with open('test_tweets.txt', 'a', encoding='utf-8') as f:
-                f.write(f"\n{datetime.now()} | Source: {topic_source} | Topic: {selected_topic}\n")
+                f.write(f"\n{datetime.utcnow()} | Source: {topic_source} | Topic: {selected_topic}\n")
                 f.write(f"{tweet}\n")
                 f.write("-" * 60 + "\n")
             print("💾 Saved to test_tweets.txt for review\n")
@@ -447,13 +578,29 @@ Output only the tweet text, nothing else."""
             print("📤 Posting to X...")
             result = client.create_tweet(text=tweet)
             tweet_id = result.data['id']
+            tweet_url = f"https://x.com/i/web/status/{tweet_id}"
+            
             print(f"✅ Posted successfully!")
             print(f"   Tweet ID: {tweet_id}")
-            print(f"   URL: https://x.com/i/web/status/{tweet_id}\n")
+            print(f"   URL: {tweet_url}\n")
             
             # Log successful post
+            timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
             with open('posted_tweets.txt', 'a', encoding='utf-8') as f:
-                f.write(f"{datetime.now()} | {tweet_id} | {topic_source} | {selected_topic} | {tweet}\n")
+                f.write(f"{timestamp} | {tweet_id} | {topic_source} | {selected_topic} | {tweet}\n")
+            
+            # Send Discord notification
+            tweet_data = {
+                'tweet_text': tweet,
+                'tweet_id': tweet_id,
+                'tweet_url': tweet_url,
+                'length': len(tweet),
+                'topic_source': topic_source,
+                'selected_topic': selected_topic,
+                'timestamp': timestamp,
+                'model_name': model_name
+            }
+            send_discord_notification(tweet_data)
         
     except Exception as e:
         print(f"\n❌ Error occurred: {e}")
