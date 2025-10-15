@@ -3,7 +3,7 @@ import tweepy
 import random
 import sys
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, UTC
 
 # Import our modules
 from config import DRY_RUN, TEST_CONNECTION
@@ -21,12 +21,12 @@ def main():
     
     # Calculate random delay and post time BEFORE doing anything else
     delay = 0
-    post_time_utc = datetime.utcnow()
+    post_time_utc = datetime.now(UTC)
     
     if not (DRY_RUN or TEST_CONNECTION):
         max_delay = 43200 # 12 hours in seconds
         delay = random.randint(0, max_delay)
-        post_time_utc = datetime.utcnow() + timedelta(seconds=delay)
+        post_time_utc = datetime.now(UTC) + timedelta(seconds=delay)
     
     delay_hours = delay // 3600
     delay_minutes = (delay % 3600) // 60
@@ -35,14 +35,14 @@ def main():
     if not (DRY_RUN or TEST_CONNECTION):
         print(f"⏱️  Random delay: {delay_hours}h {delay_minutes}m")
         print(f"   Will post at: {post_time_utc.strftime('%Y-%m-%d %H:%M:%S UTC')}")
-        print(f"   Current time: {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')}\n")
+        print(f"   Current time: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}\n")
         
         send_discord_start_notification(post_time_utc, delay_hours, delay_minutes)
         
         print(f"⏳ Waiting {delay_hours}h {delay_minutes}m...\n")
         time.sleep(delay)
         
-        print(f"✅ Delay complete! Posting now at {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')}...\n")
+        print(f"✅ Delay complete! Posting now at {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}...\n")
     
     if DRY_RUN:
         print("🧪 DRY RUN MODE - Will NOT post to X\n")
@@ -160,7 +160,7 @@ def main():
             
             # Save to file for review
             with open('test_tweets.txt', 'a', encoding='utf-8') as f:
-                f.write(f"\n{datetime.utcnow()} | Source: {topic_source} | Topic: {selected_topic}\n")
+                f.write(f"\n{datetime.now(UTC)} | Source: {topic_source} | Topic: {selected_topic}\n")
                 f.write(f"{tweet}\n")
                 f.write("-" * 60 + "\n")
             print("💾 Saved to test_tweets.txt for review\n")
@@ -176,7 +176,7 @@ def main():
             print(f"   URL: {tweet_url}\n")
             
             # Log successful post
-            timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
+            timestamp = datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
             with open('posted_tweets.txt', 'a', encoding='utf-8') as f:
                 f.write(f"{timestamp} | {tweet_id} | {topic_source} | {selected_topic} | {tweet}\n")
             

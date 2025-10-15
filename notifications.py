@@ -1,6 +1,6 @@
 """Discord notification functions"""
 import os
-from datetime import datetime
+from datetime import datetime, UTC
 
 
 def send_discord_start_notification(post_time_utc, delay_hours, delay_minutes):
@@ -22,7 +22,7 @@ def send_discord_start_notification(post_time_utc, delay_hours, delay_minutes):
             "fields": [
                 {
                     "name": "Start Time (UTC)",
-                    "value": datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC'),
+                    "value": datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC'),
                     "inline": False
                 },
                 {
@@ -39,7 +39,7 @@ def send_discord_start_notification(post_time_utc, delay_hours, delay_minutes):
             "footer": {
                 "text": "X Bot Automation"
             },
-            "timestamp": datetime.utcnow().isoformat()
+            "timestamp": datetime.now(UTC).isoformat()
         }
         
         payload = {
@@ -113,7 +113,7 @@ def send_discord_notification(tweet_data):
             "footer": {
                 "text": "X Bot Automation"
             },
-            "timestamp": datetime.utcnow().isoformat()
+            "timestamp": datetime.now(UTC).isoformat()
         }
         
         payload = {
