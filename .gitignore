@@ -1,3 +1,4 @@
 .env
 posted_tweets.txt
 test_tweets.txt
+/__pycache__
