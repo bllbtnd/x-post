@@ -4,7 +4,8 @@ import os
 import random
 import sys
 import re
-from datetime import datetime
+import time
+from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
 # Load .env for local testing
@@ -236,6 +237,23 @@ def main():
     print("=" * 60)
     print("X AUTOMATED POSTING SCRIPT")
     print("=" * 60)
+    
+    # Random delay at start (only for real posts, not dry runs or tests)
+    if not (DRY_RUN or '--test-connection' in sys.argv):
+        max_delay = 43200 # 12 hours in seconds
+        delay = random.randint(0, max_delay)
+        delay_hours = delay // 3600
+        delay_minutes = (delay % 3600) // 60
+        
+        post_time = datetime.now() + timedelta(seconds=delay)
+        
+        print(f"⏱️  Random delay: {delay_hours}h {delay_minutes}m")
+        print(f"   Will post around {post_time.strftime('%I:%M %p UTC')}")
+        print(f"   Current time: {datetime.now().strftime('%I:%M %p UTC')}\n")
+        
+        time.sleep(delay)
+        
+        print(f"✅ Delay complete! Posting now...\n")
     
     if DRY_RUN:
         print("🧪 DRY RUN MODE - Will NOT post to X\n")
