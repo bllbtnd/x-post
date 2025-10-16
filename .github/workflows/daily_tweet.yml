@@ -33,3 +33,11 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           PYTHONUNBUFFERED: 1
         run: python -u main.py
+      
+      - name: Commit topic history
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add topic_history.json posted_tweets.txt
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update topic history [skip ci]"
+          git push

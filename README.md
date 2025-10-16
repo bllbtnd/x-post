@@ -7,7 +7,8 @@ Automated Twitter/X bot that posts viral-optimized content daily using AI. Fetch
 - **Smart Topic Selection**: Fetches trending news via NewsAPI, lets Gemini AI pick the most viral-worthy topic
 - **AI Tweet Generation**: Uses Gemini to write controversial, engaging tweets (200-280 chars)
 - **Automated Scheduling**: Runs daily via GitHub Actions with randomized posting times
-- **Fallback Topics**: 14 curated strategic topics if trending fetch fails
+- **Duplicate Prevention**: Tracks last 7 days of topics to avoid repeating content
+- **Fallback Topics**: Curated strategic topics if trending fetch fails
 - **Multiple Testing Modes**: Dry run, connection testing, live posting
 
 ## Setup
@@ -117,6 +118,23 @@ Crypto regulation
 
 Bot checks this file first, then falls back to NewsAPI.
 
+### Topic History & Duplicate Prevention
+
+The bot automatically tracks used topics in `topic_history.json` to prevent posting about the same thing multiple times:
+
+- Remembers topics for **7 days**
+- Filters out topics with >70% keyword overlap
+- Auto-commits history file via GitHub Actions
+- If all topics are recent, will allow repeats (edge case)
+
+To manually reset history:
+```bash
+echo '{"topics": []}' > topic_history.json
+git add topic_history.json
+git commit -m "Reset topic history"
+git push
+```
+
 ## File Structure
 ```
 x-post/
@@ -130,6 +148,8 @@ x-post/
 ├── validation.py              # Tweet validation
 ├── gemini.py                  # AI model & generation
 ├── testing.py                 # API connection tests
+├── topic_history.py           # Duplicate prevention
+├── topic_history.json         # Recent topics tracking (auto-updated)
 ├── requirements.txt           # Dependencies
 ├── .env                       # Local API keys (gitignored)
 ├── .gitignore

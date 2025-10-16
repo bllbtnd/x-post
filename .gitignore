@@ -1,4 +1,33 @@
+# Environment and secrets
 .env
+
+# Logs and history files
 posted_tweets.txt
 test_tweets.txt
-/__pycache__
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Test scripts (optional - keep local only)
+test_duplicates.py
+test_topic_save.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

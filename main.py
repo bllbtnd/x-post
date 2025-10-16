@@ -12,6 +12,7 @@ from trending import get_trending_topics, load_curated_trends, select_best_topic
 from validation import validate_tweet
 from gemini import configure_gemini, generate_tweet
 from testing import test_api_connections
+from topic_history import filter_recent_topics, add_topic_to_history
 
 
 def main():
@@ -105,6 +106,13 @@ def main():
         print("❌ No topics available. Add topics to trending_topics.txt or configure NewsAPI.\n")
         sys.exit(1)
     
+    # Filter out recently used topics
+    all_topics = filter_recent_topics(all_topics)
+    
+    if not all_topics:
+        print("❌ All topics recently used. Add more topics or wait.\n")
+        sys.exit(1)
+    
     # DISPLAY ALL TOPICS BEING SENT TO GEMINI
     print(f"\n{'='*60}")
     print(f"ALL TOPICS SENT TO GEMINI FOR SELECTION ({len(all_topics)} total):")
@@ -179,6 +187,9 @@ def main():
             timestamp = datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
             with open('posted_tweets.txt', 'a', encoding='utf-8') as f:
                 f.write(f"{timestamp} | {tweet_id} | {topic_source} | {selected_topic} | {tweet}\n")
+            
+            # Add topic to history to prevent repeats
+            add_topic_to_history(selected_topic, topic_source)
             
             # Send Discord notification
             tweet_data = {

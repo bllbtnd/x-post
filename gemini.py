@@ -60,7 +60,7 @@ Requirements:
 - Strong clear opinion that pisses off exactly half the room
 - Make ONE enemy clearly defined (weak people, fake entrepreneurs, whatever)
 - End with practical insight they'll steal and repost
-- British spelling fine, keeps it classy
+- British spelling fine, keeps it classy, but do not overdo it
 - Strategic emojis (1-2 max) for visual break in feed
 - No ALL CAPS
 - No links
@@ -68,7 +68,9 @@ Requirements:
 - If there is something big happening in the world currently, use it as topic
 - No mentions
 - No bold or special characters
-- One niche hashtag if it's trending and relevant
+- Absolutely no hashtags
+- Do not post anything NSFW or adult
+- Do not post anything violent or gory  
 - Do not post anything illegal
 - Do not add flags or political symbols (unless it is EU, Hungary, UK, US, Russia, Poland, Greece, UAE, Albania)
 - Make sure you use the correct date and time if you mention it.
