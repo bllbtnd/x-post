@@ -7,12 +7,7 @@ from datetime import datetime, timedelta, UTC
 
 # Import our modules
 from config import DRY_RUN, TEST_CONNECTION
-from notifications import (
-    send_discord_scheduled_notification,
-    send_discord_posted_notification,
-    send_discord_start_notification,  # legacy, can be removed later
-    send_discord_notification         # legacy, can be removed later
-)
+from notifications import send_discord_scheduled_notification, send_discord_posted_notification
 from trending import get_trending_topics, load_curated_trends, select_best_topic
 from validation import validate_tweet
 from gemini import configure_gemini, generate_tweet
