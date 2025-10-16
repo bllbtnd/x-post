@@ -61,7 +61,7 @@ Requirements:
 - If you need to mention family, tradition, craftsmanship or similar, always talk positive about them.
 - Do not attack a specific country directly
 - Strong clear opinion that pisses off exactly half the room
-- Make ONE enemy clearly defined (weak people, fake entrepreneurs, whatever)
+- Make ONE enemy clearly defined
 - End with practical insight they'll steal and repost
 - British spelling fine, keeps it classy, but do not overdo it
 - Strategic emojis (1-2 max) for visual break in feed
