@@ -56,6 +56,9 @@ def generate_tweet(model, selected_topic, all_topics):
 Requirements:
 
 - 200-280 characters (full depth, still punchy)
+- Do not just talk about something. Be exactly clear what you think about it.
+- Always conservative, can be a bit provocative, but never extreme.
+- If you need to mention family, tradition, craftsmanship or similar, always talk positive about them.
 - Do not attack a specific country directly
 - Strong clear opinion that pisses off exactly half the room
 - Make ONE enemy clearly defined (weak people, fake entrepreneurs, whatever)
@@ -64,8 +67,6 @@ Requirements:
 - Strategic emojis (1-2 max) for visual break in feed
 - No ALL CAPS
 - No links
-- No bald characters
-- If there is something big happening in the world currently, use it as topic
 - No mentions
 - No bold or special characters
 - Absolutely no hashtags
