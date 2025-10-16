@@ -7,7 +7,12 @@ from datetime import datetime, timedelta, UTC
 
 # Import our modules
 from config import DRY_RUN, TEST_CONNECTION
-from notifications import send_discord_start_notification, send_discord_notification
+from notifications import (
+    send_discord_scheduled_notification,
+    send_discord_posted_notification,
+    send_discord_start_notification,  # legacy, can be removed later
+    send_discord_notification         # legacy, can be removed later
+)
 from trending import get_trending_topics, load_curated_trends, select_best_topic
 from validation import validate_tweet
 from gemini import configure_gemini, generate_tweet
@@ -19,31 +24,6 @@ def main():
     print("=" * 60)
     print("X AUTOMATED POSTING SCRIPT")
     print("=" * 60)
-    
-    # Calculate random delay and post time BEFORE doing anything else
-    delay = 0
-    post_time_utc = datetime.now(UTC)
-    
-    if not (DRY_RUN or TEST_CONNECTION):
-        max_delay = 43200 # 12 hours in seconds
-        delay = random.randint(0, max_delay)
-        post_time_utc = datetime.now(UTC) + timedelta(seconds=delay)
-    
-    delay_hours = delay // 3600
-    delay_minutes = (delay % 3600) // 60
-    
-    # Send start notification FIRST (only for real posts)
-    if not (DRY_RUN or TEST_CONNECTION):
-        print(f"⏱️  Random delay: {delay_hours}h {delay_minutes}m")
-        print(f"   Will post at: {post_time_utc.strftime('%Y-%m-%d %H:%M:%S UTC')}")
-        print(f"   Current time: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}\n")
-        
-        send_discord_start_notification(post_time_utc, delay_hours, delay_minutes)
-        
-        print(f"⏳ Waiting {delay_hours}h {delay_minutes}m...\n")
-        time.sleep(delay)
-        
-        print(f"✅ Delay complete! Posting now at {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}...\n")
     
     if DRY_RUN:
         print("🧪 DRY RUN MODE - Will NOT post to X\n")
@@ -128,7 +108,7 @@ def main():
     print(f"{'='*60}\n")
     print("Legend: 🔥 = News trending | 📋 = Curated topic\n")
     
-    # STEP 1: Let Gemini choose the best topic
+    # STEP 1: Let Gemini choose the best topic BEFORE delay
     selected_topic = select_best_topic(model, all_topics)
     
     print(f"✅ Gemini selected: {selected_topic}\n")
@@ -139,75 +119,78 @@ def main():
     else:
         topic_source = "trending"
     
-    # STEP 2: Generate tweet on the selected topic
-    try:
-        tweet = generate_tweet(model, selected_topic, all_topics)
+    # STEP 2: Generate tweet on the selected topic (before delay)
+    tweet = generate_tweet(model, selected_topic, all_topics)
+
+    # Calculate random delay and post time
+    delay = 0
+    post_time_utc = datetime.now(UTC)
+    if not (DRY_RUN or TEST_CONNECTION):
+        max_delay = 43200 # 12 hours in seconds
+        delay = random.randint(0, max_delay)
+        post_time_utc = datetime.now(UTC) + timedelta(seconds=delay)
+    delay_hours = delay // 3600
+    delay_minutes = (delay % 3600) // 60
+
+    # Send scheduled notification with tweet preview (only for real posts)
+    if not (DRY_RUN or TEST_CONNECTION):
+        print(f"⏱️  Random delay: {delay_hours}h {delay_minutes}m")
+        print(f"   Will post at: {post_time_utc.strftime('%Y-%m-%d %H:%M:%S UTC')}")
+        print(f"   Current time: {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}\n")
+        send_discord_scheduled_notification(
+            post_time_utc, delay_hours, delay_minutes, selected_topic, topic_source, tweet
+        )
+        print(f"⏳ Waiting {delay_hours}h {delay_minutes}m...\n")
+        time.sleep(delay)
+        print(f"✅ Delay complete! Posting now at {datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')}...\n")
+    
+    # Validate tweet
+    issues = validate_tweet(tweet)
+    if issues:
+        print("⚠️  Validation warnings:")
+        for issue in issues:
+            print(f"   - {issue}")
+        print()
+    else:
+        print("✅ Tweet validation passed\n")
+    
+    # Post to X (or skip if dry run)
+    if DRY_RUN:
+        print("🧪 DRY RUN: Would post this tweet to X")
+        print("   Run without --dry-run or --test to post for real\n")
         
-        print(f"\n{'='*60}")
-        print("GENERATED TWEET:")
-        print(f"{'='*60}")
-        print(tweet)
-        print(f"{'='*60}")
-        print(f"Length: {len(tweet)} characters")
-        print(f"Source: {topic_source}\n")
+        # Save to file for review
+        with open('test_tweets.txt', 'a', encoding='utf-8') as f:
+            f.write(f"\n{datetime.now(UTC)} | Source: {topic_source} | Topic: {selected_topic}\n")
+            f.write(f"{tweet}\n")
+            f.write("-" * 60 + "\n")
+        print("💾 Saved to test_tweets.txt for review\n")
         
-        # Validate tweet
-        issues = validate_tweet(tweet)
-        if issues:
-            print("⚠️  Validation warnings:")
-            for issue in issues:
-                print(f"   - {issue}")
-            print()
-        else:
-            print("✅ Tweet validation passed\n")
+    else:
+        print("📤 Posting to X...")
+        result = client.create_tweet(text=tweet)
+        tweet_id = result.data['id']
+        tweet_url = f"https://x.com/i/web/status/{tweet_id}"
         
-        # Post to X (or skip if dry run)
-        if DRY_RUN:
-            print("🧪 DRY RUN: Would post this tweet to X")
-            print("   Run without --dry-run or --test to post for real\n")
-            
-            # Save to file for review
-            with open('test_tweets.txt', 'a', encoding='utf-8') as f:
-                f.write(f"\n{datetime.now(UTC)} | Source: {topic_source} | Topic: {selected_topic}\n")
-                f.write(f"{tweet}\n")
-                f.write("-" * 60 + "\n")
-            print("💾 Saved to test_tweets.txt for review\n")
-            
-        else:
-            print("📤 Posting to X...")
-            result = client.create_tweet(text=tweet)
-            tweet_id = result.data['id']
-            tweet_url = f"https://x.com/i/web/status/{tweet_id}"
-            
-            print(f"✅ Posted successfully!")
-            print(f"   Tweet ID: {tweet_id}")
-            print(f"   URL: {tweet_url}\n")
-            
-            # Log successful post
-            timestamp = datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
-            with open('posted_tweets.txt', 'a', encoding='utf-8') as f:
-                f.write(f"{timestamp} | {tweet_id} | {topic_source} | {selected_topic} | {tweet}\n")
-            
-            # Add topic to history to prevent repeats
-            add_topic_to_history(selected_topic, topic_source)
-            
-            # Send Discord notification
-            tweet_data = {
-                'tweet_text': tweet,
-                'tweet_id': tweet_id,
-                'tweet_url': tweet_url,
-                'length': len(tweet),
-                'topic_source': topic_source,
-                'selected_topic': selected_topic,
-                'timestamp': timestamp,
-                'model_name': model_name
-            }
-            send_discord_notification(tweet_data)
-        
-    except Exception as e:
-        print(f"\n❌ Error occurred: {e}")
-        print(f"   Error type: {type(e).__name__}")
-        raise
+        print(f"✅ Posted successfully!")
+        print(f"   Tweet ID: {tweet_id}")
+        print(f"   URL: {tweet_url}\n")
+        timestamp = datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
+        with open('posted_tweets.txt', 'a', encoding='utf-8') as f:
+            f.write(f"{timestamp} | {tweet_id} | {topic_source} | {selected_topic} | {tweet}\n")
+        add_topic_to_history(selected_topic, topic_source)
+        tweet_data = {
+            'tweet_text': tweet,
+            'tweet_id': tweet_id,
+            'tweet_url': tweet_url,
+            'length': len(tweet),
+            'topic_source': topic_source,
+            'selected_topic': selected_topic,
+            'timestamp': timestamp,
+            'model_name': model_name
+        }
+        send_discord_posted_notification(tweet_data)
+    
 
 
 if __name__ == "__main__":
