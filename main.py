@@ -126,7 +126,7 @@ def main():
     delay = 0
     post_time_utc = datetime.now(UTC)
     if not (DRY_RUN or TEST_CONNECTION):
-        max_delay = 43200 # 12 hours in seconds
+        max_delay = 21600
         delay = random.randint(0, max_delay)
         post_time_utc = datetime.now(UTC) + timedelta(seconds=delay)
     delay_hours = delay // 3600

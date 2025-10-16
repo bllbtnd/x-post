@@ -176,31 +176,26 @@ def send_discord_scheduled_notification(post_time_utc, delay_hours, delay_minute
 
 
 def send_discord_posted_notification(tweet_data):
-    """Send notification to Discord webhook when tweet is posted (with tick)"""
+    """Send simple notification when tweet is posted"""
     try:
         import requests
         webhook_url = os.environ.get('DISCORD_WEBHOOK_URL')
         if not webhook_url:
             print("⚠️  Discord webhook not configured, skipping notification\n")
             return
+        
+        # Simple message with just the URL
         embed = {
-            "title": "✅ X Bot Tweet Posted",
-            "description": tweet_data['tweet_text'],
+            "title": "✅ X Post Published",
+            "description": f"[View Tweet]({tweet_data['tweet_url']})",
             "color": 5814783,  # Green color
-            "fields": [
-                {"name": "Tweet ID", "value": tweet_data['tweet_id'], "inline": True},
-                {"name": "Length", "value": f"{tweet_data['length']} chars", "inline": True},
-                {"name": "Topic Source", "value": tweet_data['topic_source'].capitalize(), "inline": True},
-                {"name": "Selected Topic", "value": tweet_data['selected_topic'], "inline": False},
-                {"name": "Tweet URL", "value": tweet_data['tweet_url'], "inline": False},
-                {"name": "Posted At (UTC)", "value": tweet_data['timestamp'], "inline": True},
-                {"name": "Model Used", "value": tweet_data['model_name'], "inline": True}
-            ],
             "footer": {"text": "X Bot Automation"},
             "timestamp": datetime.now(UTC).isoformat()
         }
+        
         payload = {"embeds": [embed]}
         response = requests.post(webhook_url, json=payload, timeout=10)
+        
         if response.status_code == 204:
             print("✅ Discord posted notification sent\n")
         else:
