@@ -56,6 +56,10 @@ def generate_tweet(model, selected_topic, all_topics):
 Requirements:
 
 - 200-280 characters (full depth, still punchy)
+- Compose the tweet in a way that maximizes engagement
+- Make sure that it is a topic that can generate a strong, clear opinion
+- Make sure the tweet is easily understandable.
+- Make it engaging and thought-provoking
 - Do not just talk about something. Be exactly clear what you think about it.
 - Always conservative, can be a bit provocative, but never extreme.
 - If you need to mention family, tradition, craftsmanship or similar, always talk positive about them.

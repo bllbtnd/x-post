@@ -95,6 +95,7 @@ Consider:
 - Current timeliness (happening NOW)
 - Emotional impact (makes people react)
 - Shareability (people will repost takes on this)
+- Make sure it is a topic that can generate a strong, clear opinion
 
 Current date: {datetime.now().strftime('%d %B %Y')}
 
