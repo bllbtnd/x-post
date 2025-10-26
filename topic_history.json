@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Britney Spears Slams Kevin Federline amid His Book Revelations: 'If You Really Love Someone You Don't Help Them by Humiliating Them'",
-      "source": "trending",
-      "timestamp": "2025-10-18T08:49:59.084200+00:00"
-    },
-    {
-      "topic": "President Trump commutes the prison sentence of George Santos",
-      "source": "trending",
-      "timestamp": "2025-10-19T07:19:53.686547+00:00"
-    },
-    {
       "topic": "\u201cZombie Deer Disease\u201d Detected Again In Southern State As Authorities Launch Emergency Response Plan",
       "source": "trending",
       "timestamp": "2025-10-20T04:46:22.601550+00:00"
@@ -39,6 +29,11 @@
       "topic": "Supreme Court liberals decry \u2018excruciating suffocation\u2019 in nitrogen hypoxia executions",
       "source": "trending",
       "timestamp": "2025-10-25T07:23:35.215024+00:00"
+    },
+    {
+      "topic": "Tropical Storm Melissa stationary in the Caribbean as 4 deaths reported and huge rains expected",
+      "source": "trending",
+      "timestamp": "2025-10-26T07:42:06.203645+00:00"
     }
   ]
 }
