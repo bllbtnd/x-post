@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "\u201cZombie Deer Disease\u201d Detected Again In Southern State As Authorities Launch Emergency Response Plan",
-      "source": "trending",
-      "timestamp": "2025-10-20T04:46:22.601550+00:00"
-    },
-    {
       "topic": "Israel strikes Gaza as both Israel and Hamas accuse each other of breaching ceasefire",
       "source": "trending",
       "timestamp": "2025-10-21T08:43:59.862711+00:00"
@@ -34,6 +29,11 @@
       "topic": "Tropical Storm Melissa stationary in the Caribbean as 4 deaths reported and huge rains expected",
       "source": "trending",
       "timestamp": "2025-10-26T07:42:06.203645+00:00"
+    },
+    {
+      "topic": "Trump travels to Asia to meet with China's Xi Jinping as the U.S. government shutdown in the U.S. drags on",
+      "source": "trending",
+      "timestamp": "2025-10-27T06:34:09.840936+00:00"
     }
   ]
 }
