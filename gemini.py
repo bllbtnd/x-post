@@ -55,6 +55,7 @@ def generate_tweet(model, selected_topic, all_topics):
 
 Requirements:
 
+- Keep in mind that I am European, not American, so generate the content based on that.
 - 200-280 characters (full depth, still punchy)
 - Compose the tweet in a way that maximizes engagement
 - Make sure that it is a topic that can generate a strong, clear opinion
