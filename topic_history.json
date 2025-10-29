@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Israel strikes Gaza as both Israel and Hamas accuse each other of breaching ceasefire",
-      "source": "trending",
-      "timestamp": "2025-10-21T08:43:59.862711+00:00"
-    },
-    {
       "topic": "The White House starts demolishing part of the East Wing to build Trump's ballroom",
       "source": "trending",
       "timestamp": "2025-10-22T04:21:57.136362+00:00"
@@ -34,6 +29,11 @@
       "topic": "Trump travels to Asia to meet with China's Xi Jinping as the U.S. government shutdown in the U.S. drags on",
       "source": "trending",
       "timestamp": "2025-10-27T06:34:09.840936+00:00"
+    },
+    {
+      "topic": "Trump plans to install Border Patrol officials to lead a more aggressive migrant crackdown",
+      "source": "trending",
+      "timestamp": "2025-10-29T03:36:59.482560+00:00"
     }
   ]
 }
