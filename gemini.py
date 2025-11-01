@@ -58,6 +58,7 @@ Requirements:
 - Keep in mind that I am European, not American, so generate the content based on that.
 - 200-280 characters (full depth, still punchy)
 - Compose the tweet in a way that maximizes engagement
+- Compose the tweet so it is easy to understand, and well phrased
 - Make sure that it is a topic that can generate a strong, clear opinion
 - Make sure the tweet is easily understandable.
 - Make it engaging and thought-provoking
