@@ -58,31 +58,31 @@ Requirements:
 - Keep in mind that I am European, not American, so generate the content based on that.
 - 200-280 characters (full depth, still punchy)
 - Compose the tweet in a way that maximizes engagement
-- Compose the tweet so it is easy to understand, and well phrased
-- Make sure that it is a topic that can generate a strong, clear opinion
-- Make sure the tweet is easily understandable.
-- Make it engaging and thought-provoking
-- Do not just talk about something. Be exactly clear what you think about it.
-- Always conservative, can be a bit provocative, but never extreme.
-- If you need to mention family, tradition, craftsmanship or similar, always talk positive about them.
+- Hook in first 7 words - make them stop scrolling
+- ONE clear enemy (lazy thinking, fake virtue, bureaucrats, or specific mindset)
+- Definitive stance that splits the room 50/50
+- Always be in favour of conservative values.
+- Personal stake or cost - show what YOU gain or lose
+- Unexpected angle most won't see coming
+- End with practical action or reframeable insight
+- Make it quotable - they should want to screenshot it
+- Concrete > abstract (name the behaviour, not the concept)
+- Challenge consensus without being edgy for sport
+- If mentioning family, tradition, craftsmanship or similar, always frame positively
 - Do not attack a specific country directly
-- Strong clear opinion that pisses off exactly half the room
-- Make ONE enemy clearly defined
-- End with practical insight they'll steal and repost
-- British spelling fine, keeps it classy, but do not overdo it
 - Strategic emojis (1-2 max) for visual break in feed
+- British spelling acceptable, keeps it sharp
 - No ALL CAPS
 - No links
 - No mentions
 - No bold or special characters
 - Absolutely no hashtags
 - Do not post anything NSFW or adult
-- Do not post anything violent or gory  
+- Do not post anything violent or gory
 - Do not post anything illegal
 - Do not add flags or political symbols (unless it is EU, Hungary, UK, US, Russia, Poland, Greece, UAE, Albania)
-- Make sure you use the correct date and time if you mention it.
+- Make sure you use the correct date and time if you mention it
 - Current date: {datetime.now().strftime('%d %B %Y')}
-
 Output only the tweet text, nothing else."""
     
     print("🤖 Generating tweet with Gemini...")
