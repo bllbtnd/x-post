@@ -17,7 +17,7 @@ def get_best_gemini_model():
             return None
         
         # Prefer these models in order
-        preferred = ['gemini-2.0-flash-exp', 'gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro']
+        preferred = ['gemini-2.5-pro', 'gemini-2.0-flash-exp', 'gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro']
         for pref in preferred:
             for model in available:
                 if pref in model:
