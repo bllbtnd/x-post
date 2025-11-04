@@ -7,58 +7,56 @@ from datetime import datetime
 
 def get_trending_topics():
     """
-    Fetch trending topics from multiple sources via web scraping.
-    This function should be called from a script that has web search capabilities.
-    
-    For your Python bot, you have a few options:
-    1. Use newsapi.org (free tier: 100 requests/day)
-    2. Scrape Google Trends
-    3. Use trending-api libraries
-    4. Manual weekly curation
+    Fetch trending topics using news scrapers from multiple sources.
+    Uses the same scrapers as NewsScraper for consistency.
     """
-    
-    # Option 1: Use NewsAPI (recommended - free tier available)
-    # Sign up at https://newsapi.org/ for free API key
-    
     try:
-        import requests
+        from scrapers.neutral import scrape_ap
+        from scrapers.international_left import scrape_bbc, scrape_aljazeera, scrape_france24
+        from scrapers.international_right import scrape_fox
+        from scrapers.hungarian_left import scrape_telex, scrape_index, scrape_444
+        from scrapers.hungarian_right import scrape_mandiner, scrape_magyarnemzet
         
-        # Check if NewsAPI key exists
-        news_api_key = os.environ.get('NEWS_API_KEY')
+        all_articles = []
         
-        if news_api_key:
-            # Get top headlines
-            url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={news_api_key}"
-            response = requests.get(url, timeout=10)
-            
-            if response.status_code == 200:
-                data = response.json()
-                articles = data.get('articles', [])[:15]
-                
-                trends = []
-                for article in articles:
-                    title = article.get('title', '')
-                    # Extract key topic from headline
-                    if title and title != '[Removed]':
-                        # Clean up title
-                        topic = title.split(' - ')[0].strip()
-                        trends.append(topic)
-                
-                return trends
+        # Scrape from all sources
+        sources = [
+            # International
+            ("AP News (Neutral)", scrape_ap),
+            ("BBC News (Center-Left)", scrape_bbc),
+            ("Al Jazeera (Left)", scrape_aljazeera),
+            ("France24 (Center-Left)", scrape_france24),
+            ("Fox News (Right)", scrape_fox),
+            # Hungarian
+            ("Telex (HU-Left)", scrape_telex),
+            ("Index (HU-Center)", scrape_index),
+            ("444 (HU-Left)", scrape_444),
+            ("Mandiner (HU-Right)", scrape_mandiner),
+            ("Magyar Nemzet (HU-Right)", scrape_magyarnemzet),
+        ]
         
-        # Fallback: Try Google Trends via pytrends
-        try:
-            from pytrends.request import TrendReq
-            pytrends = TrendReq(hl='en-US', tz=360)
-            trending = pytrends.trending_searches(pn='united_states')
-            return trending[0].tolist()[:15]
-        except:
-            pass
-            
+        for source_name, scraper_func in sources:
+            try:
+                articles = scraper_func()
+                if articles:
+                    all_articles.extend(articles)
+                    print(f"  ✅ {source_name}: {len(articles)} articles")
+                    # Display each headline
+                    for i, article in enumerate(articles, 1):
+                        print(f"     {i}. {article['title']}")
+                else:
+                    print(f"  ⚠️  {source_name}: No articles found")
+            except Exception as e:
+                print(f"  ⚠️  {source_name}: {e}")
+        
+        # Extract just the titles as topics
+        topics = [article['title'] for article in all_articles]
+        
+        return topics
+        
     except Exception as e:
-        print(f"⚠️  Trending fetch error: {e}")
-    
-    return []
+        print(f"⚠️  Scraper error: {e}")
+        return []
 
 
 def load_curated_trends():
@@ -79,27 +77,41 @@ def load_curated_trends():
 def select_best_topic(model, all_topics):
     """
     Ask Gemini to analyze all available topics and choose the one 
-    that would get the most attention and engagement globally.
+    that would get the most attention and engagement from a center-right 
+    European conservative capitalist perspective.
     """
     try:
         topics_list = '\n'.join([f"{i+1}. {topic}" for i, topic in enumerate(all_topics)])
         
-        selection_prompt = f"""You are a viral content strategist. Analyze these topics and choose ONE that would get the most attention and engagement on X (Twitter) globally.
+        selection_prompt = f"""You are a viral content strategist with a center-right European conservative capitalist worldview. 
+
+Analyze these topics and choose ONE that would generate the most engagement on X (Twitter) from this perspective.
 
 Available topics:
 {topics_list}
 
-Consider:
-- Global relevance (matters to most people on Earth)
-- Controversy potential (splits opinion 50/50)
-- Current timeliness (happening NOW)
-- Emotional impact (makes people react)
-- Shareability (people will repost takes on this)
-- Make sure it is a topic that can generate a strong, clear opinion
+SELECTION CRITERIA:
+From a center-right European conservative capitalist perspective, choose the topic that:
+1. Has global relevance (matters beyond one country)
+2. Allows for a strong free-market or traditional values angle
+3. Creates genuine 50/50 opinion split (not just left vs right)
+4. Is timely and currently unfolding
+5. Challenges progressive narratives or state overreach
+6. Has emotional resonance (people care deeply)
+7. Offers space for a contrarian but defendable take
+8. Europeans would find particularly interesting
+
+Prioritize topics where you can defend:
+- Economic freedom and market forces
+- Individual responsibility and merit
+- Traditional institutions and values
+- National sovereignty and borders
+- Rule of law and property rights
+- Skepticism of bureaucracy and regulation
 
 Current date: {datetime.now().strftime('%d %B %Y')}
 
-Output ONLY the exact topic text from the list above that would hit hardest. No explanation, no numbering, just the topic text."""
+Output ONLY the exact topic text from the list above that offers the strongest opportunity for viral center-right engagement. No explanation, no numbering, just the topic text."""
 
         print("🎯 Asking Gemini to select best topic...")
         response = model.generate_content(selection_prompt)
