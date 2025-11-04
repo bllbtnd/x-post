@@ -3,6 +3,11 @@ import os
 import sys
 from dotenv import load_dotenv
 
+# Suppress gRPC and TensorFlow warnings from Google AI SDK
+os.environ['GRPC_VERBOSITY'] = 'ERROR'
+os.environ['GLOG_minloglevel'] = '2'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 # Load .env for local testing
 load_dotenv()
 

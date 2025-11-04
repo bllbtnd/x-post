@@ -2,7 +2,6 @@
 import os
 import tweepy
 import google.generativeai as genai
-from gemini import get_best_gemini_model
 
 
 def test_api_connections():
@@ -13,22 +12,9 @@ def test_api_connections():
     try:
         genai.configure(api_key=os.environ['GEMINI_API_KEY'])
         
-        # List available models
-        print("Available Gemini models:")
-        available = []
-        for m in genai.list_models():
-            if 'generateContent' in m.supported_generation_methods:
-                model_name = m.name.replace('models/', '')
-                available.append(model_name)
-                print(f"   - {model_name}")
-        
-        if not available:
-            print("❌ No models available with your API key\n")
-            return False
-        
-        # Test with best available model
-        model_name = get_best_gemini_model()
-        print(f"\n🧪 Testing with: {model_name}")
+        # Use the same model as configured
+        model_name = 'models/gemini-2.5-pro'
+        print(f"🧪 Testing with: {model_name}")
         test_model = genai.GenerativeModel(model_name)
         test_response = test_model.generate_content("Say 'OK' if you can read this")
         print(f"✅ Gemini API: Connected")

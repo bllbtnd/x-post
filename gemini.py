@@ -4,39 +4,12 @@ from datetime import datetime
 import google.generativeai as genai
 
 
-def get_best_gemini_model():
-    """Get the best available Gemini model"""
-    try:
-        genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-        available = []
-        for m in genai.list_models():
-            if 'generateContent' in m.supported_generation_methods:
-                available.append(m.name)
-        
-        if not available:
-            return None
-        
-        # Prefer these models in order
-        preferred = ['gemini-2.0-flash-exp', 'gemini-1.5-flash', 'gemini-1.5-pro', 'gemini-pro']
-        for pref in preferred:
-            for model in available:
-                if pref in model:
-                    return model.replace('models/', '')
-        
-        # Return first available if no preferred found
-        return available[0].replace('models/', '')
-    except Exception as e:
-        print(f"Error getting models: {e}")
-        return None
-
-
 def configure_gemini():
     """Configure and return Gemini model"""
     genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-    model_name = get_best_gemini_model()
     
-    if not model_name:
-        raise RuntimeError("No Gemini models available. Check your API key.")
+    # Use the same model as NewsScraper
+    model_name = 'models/gemini-2.5-pro'
     
     print(f"🤖 Using Gemini model: {model_name}\n")
     return genai.GenerativeModel(model_name), model_name
