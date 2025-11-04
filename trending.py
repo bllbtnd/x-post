@@ -59,21 +59,6 @@ def get_trending_topics():
         return []
 
 
-def load_curated_trends():
-    """
-    Load manually curated trending topics from a file.
-    Update this file weekly with hot topics.
-    """
-    try:
-        if os.path.exists('trending_topics.txt'):
-            with open('trending_topics.txt', 'r', encoding='utf-8') as f:
-                trends = [line.strip() for line in f if line.strip() and not line.startswith('#')]
-                return trends
-    except:
-        pass
-    return []
-
-
 def select_best_topic(model, all_topics):
     """
     Ask Gemini to analyze all available topics and choose the one 

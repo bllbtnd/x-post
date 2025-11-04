@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, UTC
 # Import our modules
 from config import DRY_RUN, TEST_CONNECTION
 from notifications import send_discord_scheduled_notification, send_discord_posted_notification
-from trending import get_trending_topics, load_curated_trends, select_best_topic
+from trending import get_trending_topics, select_best_topic
 from validation import validate_tweet
 from gemini import configure_gemini, generate_tweet
 from testing import test_api_connections
@@ -61,24 +61,12 @@ def main():
     # Fetch trending topics
     print("📊 Fetching trending topics...")
     
-    # Try multiple sources
-    all_topics = []
-    
-    # 1. Try curated file first (best quality)
-    curated = load_curated_trends()
-    if curated:
-        print(f"✅ Loaded {len(curated)} curated topics")
-        all_topics.extend(curated)
-    
-    # 2. Try NewsAPI or other services
-    trending = get_trending_topics()
-    if trending:
-        print(f"✅ Found {len(trending)} trending topics from news")
-        all_topics.extend(trending[:15])
+    # Get topics from news scrapers
+    all_topics = get_trending_topics()
     
     # Check if we have any topics at all
     if not all_topics:
-        print("❌ No topics available. Add topics to trending_topics.txt or configure NewsAPI.\n")
+        print("❌ No topics available from news sources.\n")
         sys.exit(1)
     
     # Filter out recently used topics
@@ -94,25 +82,17 @@ def main():
     print(f"{'='*60}")
     
     for i, topic in enumerate(all_topics, 1):
-        # Mark if it's from curated file or news API
-        if curated and topic in curated:
-            print(f"   {i}. 📋 {topic}")
-        else:
-            print(f"   {i}. 🔥 {topic}")
+        print(f"   {i}. {topic}")
     
     print(f"{'='*60}\n")
-    print("Legend: 🔥 = News trending | 📋 = Curated topic\n")
     
     # STEP 1: Let Gemini choose the best topic BEFORE delay
     selected_topic = select_best_topic(model, all_topics)
     
     print(f"✅ Gemini selected: {selected_topic}\n")
     
-    # Determine source
-    if curated and selected_topic in curated:
-        topic_source = "curated"
-    else:
-        topic_source = "trending"
+    # Topic source is always trending (from scrapers)
+    topic_source = "trending"
     
     # STEP 2: Generate tweet on the selected topic (before delay)
     tweet = generate_tweet(model, selected_topic, all_topics)
