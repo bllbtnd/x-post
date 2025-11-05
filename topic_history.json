@@ -1,21 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Tropical Storm Melissa stationary in the Caribbean as 4 deaths reported and huge rains expected",
-      "source": "trending",
-      "timestamp": "2025-10-26T07:42:06.203645+00:00"
-    },
-    {
-      "topic": "Trump travels to Asia to meet with China's Xi Jinping as the U.S. government shutdown in the U.S. drags on",
-      "source": "trending",
-      "timestamp": "2025-10-27T06:34:09.840936+00:00"
-    },
-    {
-      "topic": "Trump plans to install Border Patrol officials to lead a more aggressive migrant crackdown",
-      "source": "trending",
-      "timestamp": "2025-10-29T03:36:59.482560+00:00"
-    },
-    {
       "topic": "Trump seems to close the door on trying for another term",
       "source": "trending",
       "timestamp": "2025-10-30T05:30:44.076854+00:00"
@@ -34,6 +19,11 @@
       "topic": "FAA warns of \u2018surge\u2019 in air traffic controllers calling out of work",
       "source": "trending",
       "timestamp": "2025-11-02T04:54:22.179096+00:00"
+    },
+    {
+      "topic": "Democrat Zohran Mamdani becomes the city\u2019s first Muslim mayor and its youngest in generations. The 34-year-old state lawmaker harnessed enthusiasm and social media savvy to become a rising star in the party, but his candidacy sparked an ideological divide.",
+      "source": "trending",
+      "timestamp": "2025-11-05T06:40:05.842256+00:00"
     }
   ]
 }
