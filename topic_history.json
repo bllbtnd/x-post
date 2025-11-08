@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Covid in pregnancy tied to autism, developmental issues, study says",
-      "source": "trending",
-      "timestamp": "2025-11-01T03:32:32.154870+00:00"
-    },
-    {
       "topic": "FAA warns of \u2018surge\u2019 in air traffic controllers calling out of work",
       "source": "trending",
       "timestamp": "2025-11-02T04:54:22.179096+00:00"
@@ -24,6 +19,11 @@
       "topic": "Louvre criticised for spending money on art instead of security in years before heist",
       "source": "trending",
       "timestamp": "2025-11-07T05:59:21.043206+00:00"
+    },
+    {
+      "topic": "Trump says US to boycott G20 in South Africa, repeating allegations about treatment of white farmers",
+      "source": "trending",
+      "timestamp": "2025-11-08T05:50:13.747709+00:00"
     }
   ]
 }
