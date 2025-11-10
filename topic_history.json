@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "FAA warns of \u2018surge\u2019 in air traffic controllers calling out of work",
-      "source": "trending",
-      "timestamp": "2025-11-02T04:54:22.179096+00:00"
-    },
-    {
       "topic": "Democrat Zohran Mamdani becomes the city\u2019s first Muslim mayor and its youngest in generations. The 34-year-old state lawmaker harnessed enthusiasm and social media savvy to become a rising star in the party, but his candidacy sparked an ideological divide.",
       "source": "trending",
       "timestamp": "2025-11-05T06:40:05.842256+00:00"
@@ -29,6 +24,11 @@
       "topic": "Commercial flights hit by US shutdown as calls grow to ground private jets",
       "source": "trending",
       "timestamp": "2025-11-09T04:29:17.169255+00:00"
+    },
+    {
+      "topic": "Why does the UK want to copy Denmark\u2019s stringent immigration policies?",
+      "source": "trending",
+      "timestamp": "2025-11-10T05:58:00.607576+00:00"
     }
   ]
 }
