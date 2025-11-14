@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Louvre criticised for spending money on art instead of security in years before heist",
-      "source": "trending",
-      "timestamp": "2025-11-07T05:59:21.043206+00:00"
-    },
-    {
       "topic": "Trump says US to boycott G20 in South Africa, repeating allegations about treatment of white farmers",
       "source": "trending",
       "timestamp": "2025-11-08T05:50:13.747709+00:00"
@@ -34,6 +29,11 @@
       "topic": "Major corruption scandal engulfs top Zelensky allies",
       "source": "trending",
       "timestamp": "2025-11-13T09:21:32.711849+00:00"
+    },
+    {
+      "topic": "Ism\u00e9t bevehetik Br\u00fcsszelt a gazd\u00e1k",
+      "source": "trending",
+      "timestamp": "2025-11-14T07:41:26.990820+00:00"
     }
   ]
 }
