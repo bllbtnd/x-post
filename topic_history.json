@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Canada loses its measles-free status, with US on track to follow",
-      "source": "trending",
-      "timestamp": "2025-11-11T07:09:06.468184+00:00"
-    },
-    {
-      "topic": "A new directive by President Donald Trump\u2019s administration could make it more difficult for foreigners to visit or live in the United States if they have certain medical conditions such as diabetes or obesity or lack the economic resources and assets to support themselves.",
-      "source": "trending",
-      "timestamp": "2025-11-12T04:46:02.259121+00:00"
-    },
-    {
       "topic": "Major corruption scandal engulfs top Zelensky allies",
       "source": "trending",
       "timestamp": "2025-11-13T09:21:32.711849+00:00"
@@ -39,6 +29,11 @@
       "topic": "Brut\u00e1lis: 17 \u00e9ves l\u00e1nyt v\u00e9delmezett az \u00e9jjeli\u0151r a migr\u00e1nsband\u00e1k ellen, lev\u00e1gt\u00e1k az ujjait",
       "source": "trending",
       "timestamp": "2025-11-18T06:11:42.702279+00:00"
+    },
+    {
+      "topic": "Teljes megborul\u00e1s a brit hadseregn\u00e9l: k\u00f6telez\u0151 k\u00e9pz\u00e9st vezetnek be az elburj\u00e1nz\u00f3 \u201en\u0151gy\u0171l\u00f6let miatt\u201d",
+      "source": "trending",
+      "timestamp": "2025-11-20T05:44:09.494920+00:00"
     }
   ]
 }
