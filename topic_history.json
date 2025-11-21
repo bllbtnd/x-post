@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Major corruption scandal engulfs top Zelensky allies",
-      "source": "trending",
-      "timestamp": "2025-11-13T09:21:32.711849+00:00"
-    },
-    {
       "topic": "Ism\u00e9t bevehetik Br\u00fcsszelt a gazd\u00e1k",
       "source": "trending",
       "timestamp": "2025-11-14T07:41:26.990820+00:00"
@@ -34,6 +29,11 @@
       "topic": "Teljes megborul\u00e1s a brit hadseregn\u00e9l: k\u00f6telez\u0151 k\u00e9pz\u00e9st vezetnek be az elburj\u00e1nz\u00f3 \u201en\u0151gy\u0171l\u00f6let miatt\u201d",
       "source": "trending",
       "timestamp": "2025-11-20T05:44:09.494920+00:00"
+    },
+    {
+      "topic": "Ukraine would cede territory to Russia in draft of Trump peace plan obtained by AP",
+      "source": "trending",
+      "timestamp": "2025-11-21T03:40:42.200901+00:00"
     }
   ]
 }
