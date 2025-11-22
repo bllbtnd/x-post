@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Ism\u00e9t bevehetik Br\u00fcsszelt a gazd\u00e1k",
-      "source": "trending",
-      "timestamp": "2025-11-14T07:41:26.990820+00:00"
-    },
-    {
-      "topic": "Trump admin to end plan requiring airlines to pay passengers for delays",
-      "source": "trending",
-      "timestamp": "2025-11-15T03:57:43.617533+00:00"
-    },
-    {
       "topic": "Trump scraps tariffs on beef, coffee and tropical fruit in a push to lower grocery store prices",
       "source": "trending",
       "timestamp": "2025-11-16T08:54:59.372588+00:00"
@@ -34,6 +24,11 @@
       "topic": "Ukraine would cede territory to Russia in draft of Trump peace plan obtained by AP",
       "source": "trending",
       "timestamp": "2025-11-21T03:40:42.200901+00:00"
+    },
+    {
+      "topic": "Australia is banning social media for kids under 16. How will it work?",
+      "source": "trending",
+      "timestamp": "2025-11-22T05:02:06.225934+00:00"
     }
   ]
 }
