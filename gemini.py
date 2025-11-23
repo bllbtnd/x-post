@@ -43,6 +43,7 @@ WRITING REQUIREMENTS:
 - Optional: use at most one emoji near the end if it strengthens the punchline
 - No ALL CAPS, no links, no mentions, no hashtags, no special formatting
 - No NSFW, violence, illegality
+- Make sure the text is complete, and is not cut in half, does not end with "..."
 - Flags only if: EU, Hungary, UK, US, Russia, Poland, Greece, UAE, Albania
 - Accurate dates/times if mentioned
 - Current date: {datetime.now().strftime('%d %B %Y')}
