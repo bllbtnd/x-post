@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Trump scraps tariffs on beef, coffee and tropical fruit in a push to lower grocery store prices",
-      "source": "trending",
-      "timestamp": "2025-11-16T08:54:59.372588+00:00"
-    },
-    {
       "topic": "Zelenskyy embroiled in 'golden toilet' scandal as allies accused in $100M scheme",
       "source": "trending",
       "timestamp": "2025-11-17T09:50:14.103765+00:00"
@@ -29,6 +24,11 @@
       "topic": "Australia is banning social media for kids under 16. How will it work?",
       "source": "trending",
       "timestamp": "2025-11-22T05:02:06.225934+00:00"
+    },
+    {
+      "topic": "US senators say Rubio told them Trump\u2019s Ukraine peace plan is Russia\u2019s \u2018wish list\u2019",
+      "source": "trending",
+      "timestamp": "2025-11-23T09:29:08.995744+00:00"
     }
   ]
 }
