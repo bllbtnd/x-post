@@ -38,6 +38,7 @@ WRITING REQUIREMENTS:
 - Keep every sentence under 18 words and avoid jargon or acronyms (spell them out)
 - Name one clear villain: bloated bureaucracy, ideological crusades, corporate cronyism, or moral laziness
 - Give one concrete example that affects normal people (households, small firms, commuters, savers)
+- Blacklisted words: ideological
 - Show what the audience can still control or gain — highlight agency, not despair
 - Finish with a crisp call-to-action or question that invites a share or answer
 - Optional: use at most one emoji near the end if it strengthens the punchline
