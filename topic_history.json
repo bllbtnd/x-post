@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Teljes megborul\u00e1s a brit hadseregn\u00e9l: k\u00f6telez\u0151 k\u00e9pz\u00e9st vezetnek be az elburj\u00e1nz\u00f3 \u201en\u0151gy\u0171l\u00f6let miatt\u201d",
-      "source": "trending",
-      "timestamp": "2025-11-20T05:44:09.494920+00:00"
-    },
-    {
-      "topic": "Ukraine would cede territory to Russia in draft of Trump peace plan obtained by AP",
-      "source": "trending",
-      "timestamp": "2025-11-21T03:40:42.200901+00:00"
-    },
-    {
       "topic": "Australia is banning social media for kids under 16. How will it work?",
       "source": "trending",
       "timestamp": "2025-11-22T05:02:06.225934+00:00"
@@ -44,6 +34,11 @@
       "topic": "Ireland tightens immigration rules to check population growth",
       "source": "trending",
       "timestamp": "2025-11-27T05:14:51.523673+00:00"
+    },
+    {
+      "topic": "France to bring in form of military service, 25 years after conscription was phased out",
+      "source": "trending",
+      "timestamp": "2025-11-28T07:20:59.109064+00:00"
     }
   ]
 }
