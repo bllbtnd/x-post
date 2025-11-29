@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Australia is banning social media for kids under 16. How will it work?",
-      "source": "trending",
-      "timestamp": "2025-11-22T05:02:06.225934+00:00"
-    },
-    {
       "topic": "US senators say Rubio told them Trump\u2019s Ukraine peace plan is Russia\u2019s \u2018wish list\u2019",
       "source": "trending",
       "timestamp": "2025-11-23T09:29:08.995744+00:00"
@@ -39,6 +34,11 @@
       "topic": "France to bring in form of military service, 25 years after conscription was phased out",
       "source": "trending",
       "timestamp": "2025-11-28T07:20:59.109064+00:00"
+    },
+    {
+      "topic": "Zelensky's top adviser resigns after Ukrainian anti-corruption raid on his home",
+      "source": "trending",
+      "timestamp": "2025-11-29T08:39:46.038526+00:00"
     }
   ]
 }
