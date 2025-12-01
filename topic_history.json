@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "US senators say Rubio told them Trump\u2019s Ukraine peace plan is Russia\u2019s \u2018wish list\u2019",
-      "source": "trending",
-      "timestamp": "2025-11-23T09:29:08.995744+00:00"
-    },
-    {
       "topic": "Von der Leyen megh\u00fazta a v\u00f6r\u00f6s vonalat: Br\u00fcsszel nem egyezik bele a b\u00e9k\u00e9be \u2013 szabot\u00e1ln\u00e1k Trump terv\u00e9t",
       "source": "trending",
       "timestamp": "2025-11-24T06:28:04.192371+00:00"
@@ -44,6 +39,11 @@
       "topic": "State Department faults UK over grooming gang scandal, flags risks tied to mass migration",
       "source": "trending",
       "timestamp": "2025-11-30T09:08:07.498960+00:00"
+    },
+    {
+      "topic": "F\u00e9lelem \u00e9s retteg\u00e9s \u00f6vezi a kar\u00e1csonyi v\u00e1s\u00e1rokat N\u00e9metorsz\u00e1gban",
+      "source": "trending",
+      "timestamp": "2025-12-01T06:03:12.163073+00:00"
     }
   ]
 }
