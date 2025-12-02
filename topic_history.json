@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Von der Leyen megh\u00fazta a v\u00f6r\u00f6s vonalat: Br\u00fcsszel nem egyezik bele a b\u00e9k\u00e9be \u2013 szabot\u00e1ln\u00e1k Trump terv\u00e9t",
-      "source": "trending",
-      "timestamp": "2025-11-24T06:28:04.192371+00:00"
-    },
-    {
       "topic": "Bombshell report alleges Biden team pushed airports to house migrants, risking safety",
       "source": "trending",
       "timestamp": "2025-11-25T06:09:17.626147+00:00"
@@ -44,6 +39,11 @@
       "topic": "F\u00e9lelem \u00e9s retteg\u00e9s \u00f6vezi a kar\u00e1csonyi v\u00e1s\u00e1rokat N\u00e9metorsz\u00e1gban",
       "source": "trending",
       "timestamp": "2025-12-01T06:03:12.163073+00:00"
+    },
+    {
+      "topic": "Why is work-related migration to rich countries falling?",
+      "source": "trending",
+      "timestamp": "2025-12-02T05:02:21.183577+00:00"
     }
   ]
 }
