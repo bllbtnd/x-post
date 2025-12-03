@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Bombshell report alleges Biden team pushed airports to house migrants, risking safety",
-      "source": "trending",
-      "timestamp": "2025-11-25T06:09:17.626147+00:00"
-    },
-    {
-      "topic": "California Democrat says troops privately vow to act as 'check' on Trump orders",
-      "source": "trending",
-      "timestamp": "2025-11-26T03:41:52.527718+00:00"
-    },
-    {
       "topic": "Ilyen m\u00e9g nem volt kar\u00e1csonyi v\u00e1s\u00e1ron: a terrorvesz\u00e9ly \u00e9s az agressz\u00edv migr\u00e1nsok miatt bel\u00e9p\u0151t kell fizetni N\u00e9metorsz\u00e1gban",
       "source": "trending",
       "timestamp": "2025-11-26T11:42:40.740833+00:00"
@@ -44,6 +34,11 @@
       "topic": "Why is work-related migration to rich countries falling?",
       "source": "trending",
       "timestamp": "2025-12-02T05:02:21.183577+00:00"
+    },
+    {
+      "topic": "Donald Trump: Amerika nem finansz\u00edrozza tov\u00e1bb a h\u00e1bor\u00fat, az oroszokkal egy\u00fctt dolgozunk",
+      "source": "trending",
+      "timestamp": "2025-12-03T04:21:31.238421+00:00"
     }
   ]
 }
