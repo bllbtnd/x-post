@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "France to bring in form of military service, 25 years after conscription was phased out",
-      "source": "trending",
-      "timestamp": "2025-11-28T07:20:59.109064+00:00"
-    },
-    {
       "topic": "Zelensky's top adviser resigns after Ukrainian anti-corruption raid on his home",
       "source": "trending",
       "timestamp": "2025-11-29T08:39:46.038526+00:00"
@@ -34,6 +29,11 @@
       "topic": "Szijj\u00e1rt\u00f3 P\u00e9ter: A NATO eur\u00f3pai mainstream tag\u00e1llamai nem akarnak b\u00e9k\u00e9t",
       "source": "trending",
       "timestamp": "2025-12-04T05:48:54.079434+00:00"
+    },
+    {
+      "topic": "US Supreme Court to consider Trump\u2019s bid to end birthright citizenship",
+      "source": "trending",
+      "timestamp": "2025-12-06T07:59:48.883304+00:00"
     }
   ]
 }
