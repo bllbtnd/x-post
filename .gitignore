@@ -2,7 +2,7 @@
 .env
 
 # Test logs (local only)
-test_tweets.txt
+data/test_tweets.txt
 
 # Python cache
 __pycache__/

@@ -6,13 +6,13 @@ import time
 from datetime import datetime, timedelta, UTC
 
 # Import our modules
-from config import DRY_RUN, TEST_CONNECTION
-from notifications import send_discord_scheduled_notification, send_discord_posted_notification
-from trending import get_trending_topics, select_best_topic
-from validation import validate_tweet
-from gemini import configure_gemini, generate_tweet
-from testing import test_api_connections
-from topic_history import filter_recent_topics, add_topic_to_history
+from utils.config import DRY_RUN, TEST_CONNECTION
+from utils.notifications import send_discord_scheduled_notification, send_discord_posted_notification
+from utils.trending import get_trending_topics, select_best_topic
+from utils.validation import validate_tweet
+from utils.gemini import configure_gemini, generate_tweet
+from tests.testing import test_api_connections
+from utils.topic_history import filter_recent_topics, add_topic_to_history
 
 
 def main():
@@ -135,11 +135,11 @@ def main():
         print("   Run without --dry-run or --test to post for real\n")
         
         # Save to file for review
-        with open('test_tweets.txt', 'a', encoding='utf-8') as f:
+        with open('data/test_tweets.txt', 'a', encoding='utf-8') as f:
             f.write(f"\n{datetime.now(UTC)} | Source: {topic_source} | Topic: {selected_topic}\n")
             f.write(f"{tweet}\n")
             f.write("-" * 60 + "\n")
-        print("💾 Saved to test_tweets.txt for review\n")
+        print("💾 Saved to data/test_tweets.txt for review\n")
         
     else:
         print("📤 Posting to X...")
@@ -151,7 +151,7 @@ def main():
         print(f"   Tweet ID: {tweet_id}")
         print(f"   URL: {tweet_url}\n")
         timestamp = datetime.now(UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
-        with open('posted_tweets.txt', 'a', encoding='utf-8') as f:
+        with open('data/posted_tweets.txt', 'a', encoding='utf-8') as f:
             f.write(f"{timestamp} | {tweet_id} | {topic_source} | {selected_topic} | {tweet}\n")
         add_topic_to_history(selected_topic, topic_source)
         tweet_data = {

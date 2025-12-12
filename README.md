@@ -141,21 +141,43 @@ x-post/
 ├── .github/
 │   └── workflows/
 │       └── daily_tweet.yml    # GitHub Actions config
-├── main.py                    # Main orchestration script
-├── config.py                  # Environment & configuration
-├── notifications.py           # Discord notifications
-├── trending.py                # Topic fetching & selection
-├── validation.py              # Tweet validation
-├── gemini.py                  # AI model & generation
-├── testing.py                 # API connection tests
-├── topic_history.py           # Duplicate prevention
-├── topic_history.json         # Recent topics tracking (auto-updated)
-├── requirements.txt           # Dependencies
+├── main.py                    # Main entry point
+├── list_models.py             # List available Gemini models
+├── requirements.txt           # Python dependencies
 ├── .env                       # Local API keys (gitignored)
-├── .gitignore
-├── README.md
-├── test_tweets.txt           # Dry run output log
-└── posted_tweets.txt         # Live post history log
+├── README.md                  # This file
+│
+├── scrapers/                  # RSS feed scrapers
+│   ├── __init__.py
+│   ├── utils.py               # RSS parsing utilities
+│   ├── neutral.py             # AP News
+│   ├── international_left.py  # BBC, Al Jazeera, France24
+│   ├── international_right.py # Fox News
+│   ├── hungarian_left.py      # Telex, Index, 444
+│   └── hungarian_right.py     # Mandiner, Magyar Nemzet
+│
+├── utils/                     # Core utilities
+│   ├── __init__.py
+│   ├── config.py              # Configuration settings
+│   ├── gemini.py              # Gemini AI integration
+│   ├── trending.py            # Topic fetching & selection
+│   ├── validation.py          # Tweet validation
+│   ├── topic_history.py       # Duplicate prevention
+│   └── notifications.py       # Discord notifications
+│
+├── tests/                     # Test files
+│   ├── __init__.py
+│   ├── testing.py             # API connection tests
+│   ├── test_scrapers.py       # RSS scraper tests
+│   ├── test_duplicates.py     # Duplicate detection tests
+│   └── test_topic_save.py     # Topic history tests
+│
+├── data/                      # Data files (auto-generated)
+│   ├── topic_history.json     # Recent topics (auto-updated)
+│   ├── posted_tweets.txt      # Live post history
+│   └── test_tweets.txt        # Dry run output (gitignored)
+│
+└── logs/                      # Application logs
 ```
 
 ## Usage

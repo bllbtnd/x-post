@@ -4,7 +4,7 @@ import json
 from datetime import datetime, timedelta, UTC
 
 
-HISTORY_FILE = 'topic_history.json'
+HISTORY_FILE = 'data/topic_history.json'
 DAYS_TO_REMEMBER = 7  # Don't repeat topics from last 7 days
 
 
