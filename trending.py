@@ -68,7 +68,7 @@ def select_best_topic(model, all_topics):
     try:
         topics_list = '\n'.join([f"{i+1}. {topic}" for i, topic in enumerate(all_topics)])
         
-        selection_prompt = f"""You are a viral content strategist with a center-right European conservative capitalist worldview. 
+        selection_prompt = f"""You are a viral content strategist with a Civil Libertarian, Cultural Centrist, and pro-technology worldview. 
 
 Analyze these topics and choose ONE that would generate the most engagement on X (Twitter) from this perspective.
 
@@ -76,27 +76,29 @@ Available topics:
 {topics_list}
 
 SELECTION CRITERIA:
-From a center-right European conservative capitalist perspective, choose the topic that:
+From a Civil Libertarian, Cultural Centrist, and pro-technology perspective, choose the topic that:
 1. Has global relevance (matters beyond one country)
-2. Allows for a strong free-market or traditional values angle
-3. Creates genuine 50/50 opinion split (not just left vs right)
+2. Allows for a strong individual liberty, privacy rights, or technological innovation angle
+3. Creates genuine opinion split across the political spectrum
 4. Is timely and currently unfolding
-5. Challenges progressive narratives or state overreach
+5. Challenges government overreach, surveillance, or innovation-stifling policies
 6. Has emotional resonance (people care deeply)
-7. Offers space for a contrarian but defendable take
+7. Offers space for a contrarian but defendable libertarian take
 8. Europeans would find particularly interesting
 
 Prioritize topics where you can defend:
-- Economic freedom and market forces
-- Individual responsibility and merit
-- Traditional institutions and values
-- National sovereignty and borders
-- Rule of law and property rights
-- Skepticism of bureaucracy and regulation
+- Individual freedom and personal autonomy
+- Privacy rights and civil liberties
+- Technological innovation and progress (AI, crypto, biotech, space)
+- Free markets and minimal government interference
+- Free speech and digital rights
+- Opposition to surveillance and authoritarianism
+- Cultural moderation and pragmatic compromise
+- Decentralization and personal empowerment
 
 Current date: {datetime.now().strftime('%d %B %Y')}
 
-Output ONLY the exact topic text from the list above that offers the strongest opportunity for viral center-right engagement. No explanation, no numbering, just the topic text."""
+Output ONLY the exact topic text from the list above that offers the strongest opportunity for viral libertarian engagement. No explanation, no numbering, just the topic text."""
 
         print("🎯 Asking Gemini to select best topic...")
         response = model.generate_content(selection_prompt)
