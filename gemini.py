@@ -8,8 +8,9 @@ def configure_gemini():
     """Configure and return Gemini model"""
     genai.configure(api_key=os.environ['GEMINI_API_KEY'])
     
-    # Use the same model as NewsScraper
-    model_name = 'models/gemini-2.5-pro'
+    # Use gemini-2.5-flash - faster and higher free tier quota than 2.5-pro
+    # Flash models have higher rate limits for free tier usage
+    model_name = 'models/gemini-2.5-flash'
     
     print(f"🤖 Using Gemini model: {model_name}\n")
     return genai.GenerativeModel(model_name), model_name
