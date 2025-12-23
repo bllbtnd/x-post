@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Airbnb fined \u00a356m by Spain for advertising unlicensed properties",
-      "source": "trending",
-      "timestamp": "2025-12-15T16:49:24.183545+00:00"
-    },
-    {
-      "topic": "US social media rules for tourists could have \u2018chilling effect\u2019 on travel",
-      "source": "trending",
-      "timestamp": "2025-12-16T03:52:03.464459+00:00"
-    },
-    {
       "topic": "Az ukr\u00e1n k\u00fcl\u00fcgyminiszter felsz\u00f3l\u00edtotta az uni\u00f3s vezet\u0151ket: \u201eAdj\u00e1k oda az orosz vagyont, Moszkva fenyeget\u00e9s\u00e9t nem kell komolyan venni\u201d",
       "source": "trending",
       "timestamp": "2025-12-17T07:25:58.428696+00:00"
@@ -39,6 +29,11 @@
       "topic": "AI likely to displace jobs, says Bank of England governor",
       "source": "trending",
       "timestamp": "2025-12-22T11:42:20.855249+00:00"
+    },
+    {
+      "topic": "Pentagon taps Musk's xAI to boost sensitive government workflows, support military operations",
+      "source": "trending",
+      "timestamp": "2025-12-23T10:16:08.394482+00:00"
     }
   ]
 }
