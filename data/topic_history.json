@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Az ukr\u00e1n k\u00fcl\u00fcgyminiszter felsz\u00f3l\u00edtotta az uni\u00f3s vezet\u0151ket: \u201eAdj\u00e1k oda az orosz vagyont, Moszkva fenyeget\u00e9s\u00e9t nem kell komolyan venni\u201d",
-      "source": "trending",
-      "timestamp": "2025-12-17T07:25:58.428696+00:00"
-    },
-    {
       "topic": "Fake video claiming \u2018coup in France\u2019 goes viral \u2013 not even Macron could immediately get it removed",
       "source": "trending",
       "timestamp": "2025-12-18T09:24:28.519903+00:00"
@@ -39,6 +34,11 @@
       "topic": "US bars five Europeans over alleged pressure on tech firms to censor speech",
       "source": "trending",
       "timestamp": "2025-12-24T05:38:11.704036+00:00"
+    },
+    {
+      "topic": "A Trump-korm\u00e1ny nem t\u0171ri tov\u00e1bb a k\u00fclf\u00f6ldr\u0151l \u00e9rkez\u0151 cenz\u00far\u00e1t, t\u00f6bb eur\u00f3pait is kitiltott az orsz\u00e1gb\u00f3l",
+      "source": "trending",
+      "timestamp": "2025-12-25T08:58:23.825403+00:00"
     }
   ]
 }
