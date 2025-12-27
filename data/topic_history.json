@@ -1,21 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Fake video claiming \u2018coup in France\u2019 goes viral \u2013 not even Macron could immediately get it removed",
-      "source": "trending",
-      "timestamp": "2025-12-18T09:24:28.519903+00:00"
-    },
-    {
-      "topic": "Angli\u00e1ban hamarosan b\u00fcntethetik az iszl\u00e1m kritik\u00e1j\u00e1t",
-      "source": "trending",
-      "timestamp": "2025-12-19T06:34:36.172592+00:00"
-    },
-    {
-      "topic": "Biden DOJ and FBI considered criminal probe into Kyrsten Sinema after she left Democratic Party",
-      "source": "trending",
-      "timestamp": "2025-12-20T05:49:14.856620+00:00"
-    },
-    {
       "topic": "FBI Director Kash Patel says bureau ramping up AI to counter domestic, global threats",
       "source": "trending",
       "timestamp": "2025-12-21T06:32:14.619728+00:00"
@@ -39,6 +24,11 @@
       "topic": "A Trump-korm\u00e1ny nem t\u0171ri tov\u00e1bb a k\u00fclf\u00f6ldr\u0151l \u00e9rkez\u0151 cenz\u00far\u00e1t, t\u00f6bb eur\u00f3pait is kitiltott az orsz\u00e1gb\u00f3l",
       "source": "trending",
       "timestamp": "2025-12-25T08:58:23.825403+00:00"
+    },
+    {
+      "topic": "New York to require social media platforms to display mental health labels",
+      "source": "trending",
+      "timestamp": "2025-12-27T07:05:42.171139+00:00"
     }
   ]
 }
