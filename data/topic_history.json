@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "FBI Director Kash Patel says bureau ramping up AI to counter domestic, global threats",
-      "source": "trending",
-      "timestamp": "2025-12-21T06:32:14.619728+00:00"
-    },
-    {
-      "topic": "AI likely to displace jobs, says Bank of England governor",
-      "source": "trending",
-      "timestamp": "2025-12-22T11:42:20.855249+00:00"
-    },
-    {
       "topic": "Pentagon taps Musk's xAI to boost sensitive government workflows, support military operations",
       "source": "trending",
       "timestamp": "2025-12-23T10:16:08.394482+00:00"
@@ -29,6 +19,11 @@
       "topic": "New York to require social media platforms to display mental health labels",
       "source": "trending",
       "timestamp": "2025-12-27T07:05:42.171139+00:00"
+    },
+    {
+      "topic": "H\u00e1bor\u00fas k\u00e9sz\u00fclts\u00e9g Eur\u00f3p\u00e1ban: sorra vezetik vissza a sorkatonas\u00e1got + vide\u00f3",
+      "source": "trending",
+      "timestamp": "2025-12-30T06:16:44.936012+00:00"
     }
   ]
 }
