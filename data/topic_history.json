@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "A Trump-korm\u00e1ny nem t\u0171ri tov\u00e1bb a k\u00fclf\u00f6ldr\u0151l \u00e9rkez\u0151 cenz\u00far\u00e1t, t\u00f6bb eur\u00f3pait is kitiltott az orsz\u00e1gb\u00f3l",
-      "source": "trending",
-      "timestamp": "2025-12-25T08:58:23.825403+00:00"
-    },
-    {
       "topic": "New York to require social media platforms to display mental health labels",
       "source": "trending",
       "timestamp": "2025-12-27T07:05:42.171139+00:00"
@@ -19,6 +14,11 @@
       "topic": "Sokkol\u00f3 vide\u00f3 arr\u00f3l, hogyan r\u00fagj\u00e1k ki \u00f3r\u00e1j\u00e1r\u00f3l a balos di\u00e1kok a francia professzort",
       "source": "trending",
       "timestamp": "2025-12-31T09:22:02.522422+00:00"
+    },
+    {
+      "topic": "France proposes social media ban, following the Australian model for under-15s",
+      "source": "trending",
+      "timestamp": "2026-01-02T10:00:51.984071+00:00"
     }
   ]
 }
