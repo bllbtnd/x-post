@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "New York to require social media platforms to display mental health labels",
-      "source": "trending",
-      "timestamp": "2025-12-27T07:05:42.171139+00:00"
-    },
-    {
       "topic": "H\u00e1bor\u00fas k\u00e9sz\u00fclts\u00e9g Eur\u00f3p\u00e1ban: sorra vezetik vissza a sorkatonas\u00e1got + vide\u00f3",
       "source": "trending",
       "timestamp": "2025-12-30T06:16:44.936012+00:00"
@@ -19,6 +14,11 @@
       "topic": "France proposes social media ban, following the Australian model for under-15s",
       "source": "trending",
       "timestamp": "2026-01-02T10:00:51.984071+00:00"
+    },
+    {
+      "topic": "Bowen: Trump's action could set precedent for authoritarian powers across globe",
+      "source": "trending",
+      "timestamp": "2026-01-05T09:44:05.356445+00:00"
     }
   ]
 }
