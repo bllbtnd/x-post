@@ -95,7 +95,15 @@ def main():
     topic_source = "trending"
     
     # STEP 2: Generate tweet on the selected topic (before delay)
-    tweet = generate_tweet(model, selected_topic, all_topics)
+    # Import the function to get past posts
+    from utils.gemini import get_last_posts
+    
+    # Get the last 5 posts to avoid repetition
+    past_posts = get_last_posts(5)
+    if past_posts:
+        print(f"📝 Retrieved {len(past_posts)} past posts for context\n")
+    
+    tweet = generate_tweet(model, selected_topic, all_topics, past_posts)
 
     # Calculate random delay and post time
     delay = 0
