@@ -83,6 +83,7 @@ WRITING REQUIREMENTS - BE PUNCHY AND VIRAL:
 - CREATE URGENCY: Use "now", "today", "finally", "still" to emphasize timeliness
 - END WITH A HOOK: Ask a question that demands a response, or make a statement people can't help but share/argue with
 - VARY YOUR STRUCTURE: Don't always use the same formula - mix up your openings, middles, and endings
+- Use double linebreaks so the tweet is not one block, but more interesting.
 - Use ONE emoji maximum, only if it amplifies emotion or controversy
 - Keep sentences sharp and under 18 words
 - No ALL CAPS, links, mentions, hashtags
