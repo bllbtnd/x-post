@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "France proposes social media ban, following the Australian model for under-15s",
-      "source": "trending",
-      "timestamp": "2026-01-02T10:00:51.984071+00:00"
-    },
-    {
       "topic": "Bowen: Trump's action could set precedent for authoritarian powers across globe",
       "source": "trending",
       "timestamp": "2026-01-05T09:44:05.356445+00:00"
@@ -29,6 +24,11 @@
       "topic": "Minneapolis: ICE agent fatally shoots woman during raid",
       "source": "trending",
       "timestamp": "2026-01-09T06:50:58.979888+00:00"
+    },
+    {
+      "topic": "Global anger over Grok undressing women online",
+      "source": "trending",
+      "timestamp": "2026-01-10T09:30:34.874438+00:00"
     }
   ]
 }
