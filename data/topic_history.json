@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Bowen: Trump's action could set precedent for authoritarian powers across globe",
-      "source": "trending",
-      "timestamp": "2026-01-05T09:44:05.356445+00:00"
-    },
-    {
       "topic": "\u2018Thank you, Trump\u2019: video of crying Venezuelans thanking the US is AI-generated",
       "source": "trending",
       "timestamp": "2026-01-07T11:04:16.697320+00:00"
@@ -39,6 +34,11 @@
       "topic": "Musk says X outcry is 'excuse for censorship'",
       "source": "trending",
       "timestamp": "2026-01-12T08:45:03.258822+00:00"
+    },
+    {
+      "topic": "Malaysia and Indonesia become the first countries to block Musk\u2019s Grok over sexualized AI images",
+      "source": "trending",
+      "timestamp": "2026-01-13T05:14:32.555153+00:00"
     }
   ]
 }
