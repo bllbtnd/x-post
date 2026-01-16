@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Trump demands California hand over recipient lists as $10B paused amid fraud concerns",
-      "source": "trending",
-      "timestamp": "2026-01-08T08:02:40.747579+00:00"
-    },
-    {
-      "topic": "Minneapolis: ICE agent fatally shoots woman during raid",
-      "source": "trending",
-      "timestamp": "2026-01-09T06:50:58.979888+00:00"
-    },
-    {
       "topic": "Global anger over Grok undressing women online",
       "source": "trending",
       "timestamp": "2026-01-10T09:30:34.874438+00:00"
@@ -39,6 +29,11 @@
       "topic": "How Iran jammed Starlink (and how Iranians are trying to get around it)",
       "source": "trending",
       "timestamp": "2026-01-15T07:37:14.294900+00:00"
+    },
+    {
+      "topic": "Grok blocked from undressing images in places where it\u2019s illegal, X says - AP News",
+      "source": "trending",
+      "timestamp": "2026-01-16T09:01:18.344180+00:00"
     }
   ]
 }
