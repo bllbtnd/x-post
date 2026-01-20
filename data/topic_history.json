@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Musk says X outcry is 'excuse for censorship'",
-      "source": "trending",
-      "timestamp": "2026-01-12T08:45:03.258822+00:00"
-    },
-    {
-      "topic": "Malaysia and Indonesia become the first countries to block Musk\u2019s Grok over sexualized AI images",
-      "source": "trending",
-      "timestamp": "2026-01-13T05:14:32.555153+00:00"
-    },
-    {
       "topic": "In Sudan & Iran, digital shutdown 'masks atrocities against civilians protesting for basic freedoms'",
       "source": "trending",
       "timestamp": "2026-01-14T08:49:52.540517+00:00"
@@ -39,6 +29,11 @@
       "topic": "Az amerikai p\u00e9nz\u00fcgyminiszter had\u00fczenetet k\u00fcld\u00f6tt Gr\u00f6nlandnak: neh\u00e9z m\u00e1shogy \u00e9rtelmezni a vil\u00e1gos szavakat",
       "source": "trending",
       "timestamp": "2026-01-19T07:25:53.016810+00:00"
+    },
+    {
+      "topic": "UK to consult on social media ban for under 16s",
+      "source": "trending",
+      "timestamp": "2026-01-20T09:29:54.531977+00:00"
     }
   ]
 }
