@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Matt Damon az elt\u00f6rl\u00e9skult\u00far\u00e1r\u00f3l: nincs rehabilit\u00e1ci\u00f3, csak \u00e1lland\u00f3 megb\u00e9lyegz\u00e9s",
-      "source": "trending",
-      "timestamp": "2026-01-22T05:12:34.725517+00:00"
-    },
-    {
       "topic": "Teljesen elment az emberek j\u00f3zan esze Br\u00fcsszelben: csillog\u00f3 szemekkel v\u00e1rj\u00e1k az eur\u00f3pai katon\u00e1k Ukrajn\u00e1ba \u00e9rkez\u00e9s\u00e9t",
       "source": "trending",
       "timestamp": "2026-01-23T05:35:27.759587+00:00"
@@ -29,6 +24,11 @@
       "topic": "A br\u00fcsszeli b\u00edr\u00f3s\u00e1g jogellenesnek min\u0151s\u00edtette a NatCon betilt\u00e1s\u00e1t, Orb\u00e1n Bal\u00e1zs szerint csat\u00e1t nyert az MCC",
       "source": "trending",
       "timestamp": "2026-01-28T10:05:25.106910+00:00"
+    },
+    {
+      "topic": "American Tiktok users claim app is censoring \u2018Epstein\u2019 and ICE criticism",
+      "source": "trending",
+      "timestamp": "2026-01-29T05:49:55.454378+00:00"
     }
   ]
 }
