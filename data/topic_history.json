@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Teljesen elment az emberek j\u00f3zan esze Br\u00fcsszelben: csillog\u00f3 szemekkel v\u00e1rj\u00e1k az eur\u00f3pai katon\u00e1k Ukrajn\u00e1ba \u00e9rkez\u00e9s\u00e9t",
-      "source": "trending",
-      "timestamp": "2026-01-23T05:35:27.759587+00:00"
-    },
-    {
       "topic": "Judge who blasted Trump as 'authoritarian' blocks US from deporting pro-Palestinian campus activists",
       "source": "trending",
       "timestamp": "2026-01-24T06:23:44.431979+00:00"
@@ -29,6 +24,11 @@
       "topic": "American Tiktok users claim app is censoring \u2018Epstein\u2019 and ICE criticism",
       "source": "trending",
       "timestamp": "2026-01-29T05:49:55.454378+00:00"
+    },
+    {
+      "topic": "US opens probe after a Waymo self-driving car hit a child near a school",
+      "source": "trending",
+      "timestamp": "2026-01-30T07:45:33.237827+00:00"
     }
   ]
 }
