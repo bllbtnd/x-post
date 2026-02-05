@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "A br\u00fcsszeli b\u00edr\u00f3s\u00e1g jogellenesnek min\u0151s\u00edtette a NatCon betilt\u00e1s\u00e1t, Orb\u00e1n Bal\u00e1zs szerint csat\u00e1t nyert az MCC",
-      "source": "trending",
-      "timestamp": "2026-01-28T10:05:25.106910+00:00"
-    },
-    {
       "topic": "American Tiktok users claim app is censoring \u2018Epstein\u2019 and ICE criticism",
       "source": "trending",
       "timestamp": "2026-01-29T05:49:55.454378+00:00"
@@ -39,6 +34,11 @@
       "topic": "Spain announces plans to ban social media for under-16s",
       "source": "trending",
       "timestamp": "2026-02-04T05:58:35.046489+00:00"
+    },
+    {
+      "topic": "Digital sovereignty (3/3): Are European citizens trapped into using US Big Tech?",
+      "source": "trending",
+      "timestamp": "2026-02-05T05:46:27.320236+00:00"
     }
   ]
 }
