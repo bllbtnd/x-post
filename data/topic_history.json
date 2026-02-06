@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "American Tiktok users claim app is censoring \u2018Epstein\u2019 and ICE criticism",
-      "source": "trending",
-      "timestamp": "2026-01-29T05:49:55.454378+00:00"
-    },
-    {
       "topic": "US opens probe after a Waymo self-driving car hit a child near a school",
       "source": "trending",
       "timestamp": "2026-01-30T07:45:33.237827+00:00"
@@ -39,6 +34,11 @@
       "topic": "Digital sovereignty (3/3): Are European citizens trapped into using US Big Tech?",
       "source": "trending",
       "timestamp": "2026-02-05T05:46:27.320236+00:00"
+    },
+    {
+      "topic": "T\u00e9vesen azonos\u00edtott egy \u00d3bud\u00e1r\u00f3l ellopott pl\u00fcssmack\u00f3 \u00fcgy\u00e9ben egy szegedi n\u0151t a rend\u0151rs\u00e9gi arcfelismer\u0151 rendszer",
+      "source": "trending",
+      "timestamp": "2026-02-06T06:50:32.280333+00:00"
     }
   ]
 }
