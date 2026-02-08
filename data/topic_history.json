@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "B\u0151rsz\u00edn szerinti bel\u00e9p\u00e9s: feh\u00e9rek kiz\u00e1rva az osztr\u00e1k egyetemi programokr\u00f3l",
-      "source": "trending",
-      "timestamp": "2026-02-01T08:01:17.363482+00:00"
-    },
-    {
       "topic": "China accused of erasing Mongolian language and culture online, new study finds",
       "source": "trending",
       "timestamp": "2026-02-02T10:40:10.741343+00:00"
@@ -34,6 +29,11 @@
       "topic": "EU tells TikTok to change its 'addictive' design or risk heavy fines",
       "source": "trending",
       "timestamp": "2026-02-07T10:51:23.219970+00:00"
+    },
+    {
+      "topic": "S Korean crypto firm accidentally pays out $40bn in bitcoin",
+      "source": "trending",
+      "timestamp": "2026-02-08T08:25:30.118307+00:00"
     }
   ]
 }
