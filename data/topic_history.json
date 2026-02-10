@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "China accused of erasing Mongolian language and culture online, new study finds",
-      "source": "trending",
-      "timestamp": "2026-02-02T10:40:10.741343+00:00"
-    },
-    {
       "topic": "Fox News Poll: Too Fast, Too Unchecked? Voters sound off on rapid AI use & government regulation",
       "source": "trending",
       "timestamp": "2026-02-03T11:19:59.596800+00:00"
@@ -39,6 +34,11 @@
       "topic": "Egy m\u00e1sf\u00e9l \u00e9ves kisl\u00e1nyt is \u0151rizetbe vettek Trump fegyveresei, majdnem meghalt a fogs\u00e1gban",
       "source": "trending",
       "timestamp": "2026-02-09T08:04:12.747178+00:00"
+    },
+    {
+      "topic": "Landmark cases on social media\u2019s impact on children begin this week in US",
+      "source": "trending",
+      "timestamp": "2026-02-10T06:37:03.150827+00:00"
     }
   ]
 }
