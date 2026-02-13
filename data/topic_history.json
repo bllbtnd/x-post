@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "T\u00e9vesen azonos\u00edtott egy \u00d3bud\u00e1r\u00f3l ellopott pl\u00fcssmack\u00f3 \u00fcgy\u00e9ben egy szegedi n\u0151t a rend\u0151rs\u00e9gi arcfelismer\u0151 rendszer",
-      "source": "trending",
-      "timestamp": "2026-02-06T06:50:32.280333+00:00"
-    },
-    {
       "topic": "EU tells TikTok to change its 'addictive' design or risk heavy fines",
       "source": "trending",
       "timestamp": "2026-02-07T10:51:23.219970+00:00"
@@ -34,6 +29,11 @@
       "topic": "Nyilv\u00e1noss\u00e1 v\u00e1ltak a mocskos j\u00e1tszm\u00e1k \u2013 \u00edme Jeffrey Epstein beteges vil\u00e1ga",
       "source": "trending",
       "timestamp": "2026-02-12T07:47:20.382080+00:00"
+    },
+    {
+      "topic": "FTC warns Apple over alleged lack of conservative news",
+      "source": "trending",
+      "timestamp": "2026-02-13T11:06:13.348506+00:00"
     }
   ]
 }
