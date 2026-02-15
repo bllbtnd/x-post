@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "EU tells TikTok to change its 'addictive' design or risk heavy fines",
-      "source": "trending",
-      "timestamp": "2026-02-07T10:51:23.219970+00:00"
-    },
-    {
-      "topic": "S Korean crypto firm accidentally pays out $40bn in bitcoin",
-      "source": "trending",
-      "timestamp": "2026-02-08T08:25:30.118307+00:00"
-    },
-    {
       "topic": "Egy m\u00e1sf\u00e9l \u00e9ves kisl\u00e1nyt is \u0151rizetbe vettek Trump fegyveresei, majdnem meghalt a fogs\u00e1gban",
       "source": "trending",
       "timestamp": "2026-02-09T08:04:12.747178+00:00"
@@ -39,6 +29,11 @@
       "topic": "Are teenagers too young to scroll? Europe weighs social media bans for minors",
       "source": "trending",
       "timestamp": "2026-02-14T06:08:18.347380+00:00"
+    },
+    {
+      "topic": "Conservative firebrand launches \u2018TruckSafe Tipline\u2019 to report illegal drivers amid spike in highway deaths",
+      "source": "trending",
+      "timestamp": "2026-02-15T10:52:26.168115+00:00"
     }
   ]
 }
