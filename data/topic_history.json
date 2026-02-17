@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Egy m\u00e1sf\u00e9l \u00e9ves kisl\u00e1nyt is \u0151rizetbe vettek Trump fegyveresei, majdnem meghalt a fogs\u00e1gban",
-      "source": "trending",
-      "timestamp": "2026-02-09T08:04:12.747178+00:00"
-    },
-    {
-      "topic": "Landmark cases on social media\u2019s impact on children begin this week in US",
-      "source": "trending",
-      "timestamp": "2026-02-10T06:37:03.150827+00:00"
-    },
-    {
       "topic": "AI power players pour cash into competitive primaries as 2026 midterms heat up",
       "source": "trending",
       "timestamp": "2026-02-11T11:01:41.767432+00:00"
@@ -39,6 +29,11 @@
       "topic": "Anthropic\u2019s Claude helped Pentagon raid Caracas and seize Maduro: US media",
       "source": "trending",
       "timestamp": "2026-02-16T06:07:24.262980+00:00"
+    },
+    {
+      "topic": "Maduro raid questions trigger Pentagon review of top AI firm as potential \u2018supply chain risk\u2019",
+      "source": "trending",
+      "timestamp": "2026-02-17T10:03:54.134925+00:00"
     }
   ]
 }
