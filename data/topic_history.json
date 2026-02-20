@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Nyilv\u00e1noss\u00e1 v\u00e1ltak a mocskos j\u00e1tszm\u00e1k \u2013 \u00edme Jeffrey Epstein beteges vil\u00e1ga",
-      "source": "trending",
-      "timestamp": "2026-02-12T07:47:20.382080+00:00"
-    },
-    {
       "topic": "FTC warns Apple over alleged lack of conservative news",
       "source": "trending",
       "timestamp": "2026-02-13T11:06:13.348506+00:00"
@@ -39,6 +34,11 @@
       "topic": "\u00datlev\u00e9l-ellen\u0151rz\u00e9shez k\u00f6tn\u00e9 Ukrajna a SIM-k\u00e1rty\u00e1k v\u00e1s\u00e1rl\u00e1s\u00e1t az orosz dr\u00f3nok miatt",
       "source": "trending",
       "timestamp": "2026-02-19T06:05:00.430694+00:00"
+    },
+    {
+      "topic": "West Virginia sues Apple, accuses tech giant of letting iCloud become hub for child sexual abuse material",
+      "source": "trending",
+      "timestamp": "2026-02-20T10:21:30.906547+00:00"
     }
   ]
 }
