@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Conservative firebrand launches \u2018TruckSafe Tipline\u2019 to report illegal drivers amid spike in highway deaths",
-      "source": "trending",
-      "timestamp": "2026-02-15T10:52:26.168115+00:00"
-    },
-    {
-      "topic": "Anthropic\u2019s Claude helped Pentagon raid Caracas and seize Maduro: US media",
-      "source": "trending",
-      "timestamp": "2026-02-16T06:07:24.262980+00:00"
-    },
-    {
       "topic": "Maduro raid questions trigger Pentagon review of top AI firm as potential \u2018supply chain risk\u2019",
       "source": "trending",
       "timestamp": "2026-02-17T10:03:54.134925+00:00"
@@ -39,6 +29,11 @@
       "topic": "OpenAI didn't contact police despite employees flagging mass shooter's concerning chatbot interactions: report",
       "source": "trending",
       "timestamp": "2026-02-22T10:38:36.389567+00:00"
+    },
+    {
+      "topic": "AI analytics giant, Palantir: More scrutiny needed?",
+      "source": "trending",
+      "timestamp": "2026-02-23T08:22:30.134001+00:00"
     }
   ]
 }
