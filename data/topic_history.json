@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Maduro raid questions trigger Pentagon review of top AI firm as potential \u2018supply chain risk\u2019",
-      "source": "trending",
-      "timestamp": "2026-02-17T10:03:54.134925+00:00"
-    },
-    {
-      "topic": "Inside world's top science society's convention bashing Trump, pushing DEI, pronouns: 'Felt like a funeral'",
-      "source": "trending",
-      "timestamp": "2026-02-18T06:33:20.261750+00:00"
-    },
-    {
       "topic": "\u00datlev\u00e9l-ellen\u0151rz\u00e9shez k\u00f6tn\u00e9 Ukrajna a SIM-k\u00e1rty\u00e1k v\u00e1s\u00e1rl\u00e1s\u00e1t az orosz dr\u00f3nok miatt",
       "source": "trending",
       "timestamp": "2026-02-19T06:05:00.430694+00:00"
@@ -39,6 +29,11 @@
       "topic": "Chloe Cole Act aimed at blocking minors from undergoing life-altering transgender surgeries, GOP lawmaker says",
       "source": "trending",
       "timestamp": "2026-02-24T09:49:05.243682+00:00"
+    },
+    {
+      "topic": "Pentagon gives AI firm ultimatum: lift military limits by Friday or lose $200M deal",
+      "source": "trending",
+      "timestamp": "2026-02-25T06:59:24.137146+00:00"
     }
   ]
 }
