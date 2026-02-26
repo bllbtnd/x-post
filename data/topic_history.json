@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "\u00datlev\u00e9l-ellen\u0151rz\u00e9shez k\u00f6tn\u00e9 Ukrajna a SIM-k\u00e1rty\u00e1k v\u00e1s\u00e1rl\u00e1s\u00e1t az orosz dr\u00f3nok miatt",
-      "source": "trending",
-      "timestamp": "2026-02-19T06:05:00.430694+00:00"
-    },
-    {
       "topic": "West Virginia sues Apple, accuses tech giant of letting iCloud become hub for child sexual abuse material",
       "source": "trending",
       "timestamp": "2026-02-20T10:21:30.906547+00:00"
@@ -34,6 +29,11 @@
       "topic": "Pentagon gives AI firm ultimatum: lift military limits by Friday or lose $200M deal",
       "source": "trending",
       "timestamp": "2026-02-25T06:59:24.137146+00:00"
+    },
+    {
+      "topic": "Saj\u00e1t mag\u00e1n tesztelte egy szkeptikus norv\u00e9g tud\u00f3s a Havanna-szindr\u00f3m\u00e1t okoz\u00f3 fegyvert: m\u0171k\u00f6dik",
+      "source": "trending",
+      "timestamp": "2026-02-26T08:42:02.481967+00:00"
     }
   ]
 }
