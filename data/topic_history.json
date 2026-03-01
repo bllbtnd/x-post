@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "West Virginia sues Apple, accuses tech giant of letting iCloud become hub for child sexual abuse material",
-      "source": "trending",
-      "timestamp": "2026-02-20T10:21:30.906547+00:00"
-    },
-    {
-      "topic": "How are killer drones reshaping the conflict in Sudan",
-      "source": "trending",
-      "timestamp": "2026-02-21T10:58:31.513959+00:00"
-    },
-    {
       "topic": "OpenAI didn't contact police despite employees flagging mass shooter's concerning chatbot interactions: report",
       "source": "trending",
       "timestamp": "2026-02-22T10:38:36.389567+00:00"
@@ -39,6 +29,11 @@
       "topic": "Anthropic CEO says AI company 'cannot in good conscience accede' to Pentagon's demands",
       "source": "trending",
       "timestamp": "2026-02-27T09:39:51.476197+00:00"
+    },
+    {
+      "topic": "Trump orders government to stop using Anthropic in battle over AI use",
+      "source": "trending",
+      "timestamp": "2026-03-01T05:54:08.994045+00:00"
     }
   ]
 }
