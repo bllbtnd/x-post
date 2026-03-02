@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "OpenAI didn't contact police despite employees flagging mass shooter's concerning chatbot interactions: report",
-      "source": "trending",
-      "timestamp": "2026-02-22T10:38:36.389567+00:00"
-    },
-    {
       "topic": "AI analytics giant, Palantir: More scrutiny needed?",
       "source": "trending",
       "timestamp": "2026-02-23T08:22:30.134001+00:00"
@@ -34,6 +29,11 @@
       "topic": "Trump orders government to stop using Anthropic in battle over AI use",
       "source": "trending",
       "timestamp": "2026-03-01T05:54:08.994045+00:00"
+    },
+    {
+      "topic": "Az amerikai hadsereg olyan mesters\u00e9ges intelligenci\u00e1t haszn\u00e1lt az ir\u00e1ni bevet\u00e9sen, amir\u0151l Trump nemr\u00e9g letiltotta",
+      "source": "trending",
+      "timestamp": "2026-03-02T05:58:59.317898+00:00"
     }
   ]
 }
