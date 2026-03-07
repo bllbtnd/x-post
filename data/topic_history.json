@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Anthropic CEO says AI company 'cannot in good conscience accede' to Pentagon's demands",
-      "source": "trending",
-      "timestamp": "2026-02-27T09:39:51.476197+00:00"
-    },
-    {
       "topic": "Trump orders government to stop using Anthropic in battle over AI use",
       "source": "trending",
       "timestamp": "2026-03-01T05:54:08.994045+00:00"
@@ -34,6 +29,11 @@
       "topic": "One in 7 shops in UK has turned cashless in the past year, survey finds",
       "source": "trending",
       "timestamp": "2026-03-06T07:14:49.839790+00:00"
+    },
+    {
+      "topic": "Polymarket faces allegations of insider trading after suspicious Iran war bets",
+      "source": "trending",
+      "timestamp": "2026-03-07T05:18:28.807542+00:00"
     }
   ]
 }
