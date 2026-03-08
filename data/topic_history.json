@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Trump orders government to stop using Anthropic in battle over AI use",
-      "source": "trending",
-      "timestamp": "2026-03-01T05:54:08.994045+00:00"
-    },
-    {
       "topic": "Az amerikai hadsereg olyan mesters\u00e9ges intelligenci\u00e1t haszn\u00e1lt az ir\u00e1ni bevet\u00e9sen, amir\u0151l Trump nemr\u00e9g letiltotta",
       "source": "trending",
       "timestamp": "2026-03-02T05:58:59.317898+00:00"
@@ -34,6 +29,11 @@
       "topic": "Polymarket faces allegations of insider trading after suspicious Iran war bets",
       "source": "trending",
       "timestamp": "2026-03-07T05:18:28.807542+00:00"
+    },
+    {
+      "topic": "Tech company at odds with Pentagon warns its AI possibly gained consciousness, Elon Musk gives 2-word response",
+      "source": "trending",
+      "timestamp": "2026-03-08T07:17:28.767778+00:00"
     }
   ]
 }
