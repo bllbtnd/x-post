@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Az amerikai hadsereg olyan mesters\u00e9ges intelligenci\u00e1t haszn\u00e1lt az ir\u00e1ni bevet\u00e9sen, amir\u0151l Trump nemr\u00e9g letiltotta",
-      "source": "trending",
-      "timestamp": "2026-03-02T05:58:59.317898+00:00"
-    },
-    {
       "topic": "Musk, xAI tout newest Grok update as only 'non-woke' platform: 'Doesn't equivocate''",
       "source": "trending",
       "timestamp": "2026-03-03T11:05:21.610034+00:00"
@@ -34,6 +29,11 @@
       "topic": "Tech company at odds with Pentagon warns its AI possibly gained consciousness, Elon Musk gives 2-word response",
       "source": "trending",
       "timestamp": "2026-03-08T07:17:28.767778+00:00"
+    },
+    {
+      "topic": "Trump's Claude ban: the first salvo in a long battle over who controls AI",
+      "source": "trending",
+      "timestamp": "2026-03-09T08:34:54.416113+00:00"
     }
   ]
 }
