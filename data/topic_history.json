@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Kider\u00fclt, hogyan tudt\u00e1k meg\u00f6lni Hameneit, a CIA \u00e9s hekkerek is kellettek hozz\u00e1",
-      "source": "trending",
-      "timestamp": "2026-03-04T10:11:49.095250+00:00"
-    },
-    {
       "topic": "Regulator contacts Meta over workers watching intimate AI glasses videos",
       "source": "trending",
       "timestamp": "2026-03-05T10:03:41.952166+00:00"
@@ -39,6 +34,11 @@
       "topic": "'Radical acceleration' in targenting cycle through AI points to lack of human oversight",
       "source": "trending",
       "timestamp": "2026-03-11T06:43:54.767802+00:00"
+    },
+    {
+      "topic": "Big Tech backs Anthropic in fight against Trump administration",
+      "source": "trending",
+      "timestamp": "2026-03-12T07:07:46.181404+00:00"
     }
   ]
 }
