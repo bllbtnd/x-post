@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Tech company at odds with Pentagon warns its AI possibly gained consciousness, Elon Musk gives 2-word response",
-      "source": "trending",
-      "timestamp": "2026-03-08T07:17:28.767778+00:00"
-    },
-    {
       "topic": "Trump's Claude ban: the first salvo in a long battle over who controls AI",
       "source": "trending",
       "timestamp": "2026-03-09T08:34:54.416113+00:00"
@@ -34,6 +29,11 @@
       "topic": "Kiskor\u00faak \u00e9s magyar nevek is felker\u00fcltek az ukr\u00e1n hal\u00e1llist\u00e1ra",
       "source": "trending",
       "timestamp": "2026-03-14T06:10:04.617381+00:00"
+    },
+    {
+      "topic": "\u00cdme, K\u00edna \u00faj \u00f6t\u00e9ves terve: nagy t\u00e9tekben fogadnak a techiparra, \u00e9s tov\u00e1bb csorb\u00edtj\u00e1k a kisebbs\u00e9gi jogokat",
+      "source": "trending",
+      "timestamp": "2026-03-15T10:30:53.715384+00:00"
     }
   ]
 }
