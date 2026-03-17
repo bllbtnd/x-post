@@ -1,11 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Trump's Claude ban: the first salvo in a long battle over who controls AI",
-      "source": "trending",
-      "timestamp": "2026-03-09T08:34:54.416113+00:00"
-    },
-    {
       "topic": "Anthropic sues US government for calling it a risk",
       "source": "trending",
       "timestamp": "2026-03-10T08:45:38.083112+00:00"
@@ -39,6 +34,11 @@
       "topic": "'Gruesome' war bets fuel calls for crackdown on prediction markets",
       "source": "trending",
       "timestamp": "2026-03-16T05:59:36.424033+00:00"
+    },
+    {
+      "topic": "Minnesota bill would ban warrants allowing police to collect data from devices near a crime scene",
+      "source": "trending",
+      "timestamp": "2026-03-17T06:12:43.403319+00:00"
     }
   ]
 }
