@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Anthropic sues US government for calling it a risk",
-      "source": "trending",
-      "timestamp": "2026-03-10T08:45:38.083112+00:00"
-    },
-    {
-      "topic": "'Radical acceleration' in targenting cycle through AI points to lack of human oversight",
-      "source": "trending",
-      "timestamp": "2026-03-11T06:43:54.767802+00:00"
-    },
-    {
       "topic": "Big Tech backs Anthropic in fight against Trump administration",
       "source": "trending",
       "timestamp": "2026-03-12T07:07:46.181404+00:00"
@@ -39,6 +29,11 @@
       "topic": "Minnesota bill would ban warrants allowing police to collect data from devices near a crime scene",
       "source": "trending",
       "timestamp": "2026-03-17T06:12:43.403319+00:00"
+    },
+    {
+      "topic": "Trump administration defends Anthropic blacklisting in US court",
+      "source": "trending",
+      "timestamp": "2026-03-18T09:28:33.262461+00:00"
     }
   ]
 }
