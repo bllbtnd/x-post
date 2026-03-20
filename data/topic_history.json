@@ -1,16 +1,6 @@
 {
   "topics": [
     {
-      "topic": "Big Tech backs Anthropic in fight against Trump administration",
-      "source": "trending",
-      "timestamp": "2026-03-12T07:07:46.181404+00:00"
-    },
-    {
-      "topic": "Legalize prostitution effort left candidate \u2018shocked\u2019 in blue state with rampant human trafficking",
-      "source": "trending",
-      "timestamp": "2026-03-13T08:38:45.875103+00:00"
-    },
-    {
       "topic": "Kiskor\u00faak \u00e9s magyar nevek is felker\u00fcltek az ukr\u00e1n hal\u00e1llist\u00e1ra",
       "source": "trending",
       "timestamp": "2026-03-14T06:10:04.617381+00:00"
@@ -39,6 +29,11 @@
       "topic": "Moln\u00e1r \u00c1ron szerint orosz kamuprofilok pr\u00f3b\u00e1lj\u00e1k elhallgattatni: a Facebook 72 \u00f3r\u00e1ra letiltotta",
       "source": "trending",
       "timestamp": "2026-03-19T06:00:16.737371+00:00"
+    },
+    {
+      "topic": "Video of Iranian soldier being targeted in a Tehran strike is AI generated",
+      "source": "trending",
+      "timestamp": "2026-03-20T08:58:06.059182+00:00"
     }
   ]
 }
